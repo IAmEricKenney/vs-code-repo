@@ -2,90 +2,130 @@
     <lightning-card>
         <template if:true={fwl.data}>
             <div class="slds-m-around_medium">
-                <p>{Name}</p>
-                <p>{Division}</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Semester</th>
-                            <th>Summer</th>
-                            <th>Fall</th>
-                            <th>Spring</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="3">Teaching Total (%): <lightning-formatted-number value={Teaching_Total_FTE}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <lightning-formatted-number value={Teaching_Summer}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Teaching_Fall}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Teaching_Spring}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Disseration Chair Total (%): <lightning-formatted-number value={Dissertation_Chair_Total_FTE}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <lightning-formatted-number value={Dissertation_Chair_Summer}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Dissertation_Chair_Fall}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Dissertation_Chair_Spring}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Thesis Chair Total (%): <lightning-formatted-number value={Thesis_Chair_Total_FTE}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <lightning-formatted-number value={Thesis_Chair_Summer}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Thesis_Chair_Fall}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Thesis_Chair_Spring}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Other Total (%): <lightning-formatted-number value={Other_Semester_Total_FTE}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <lightning-formatted-number value={Other_Summer}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Other_Fall}></lightning-formatted-number>
-                            </td>
-                            <td>
-                                <lightning-formatted-number value={Other_Spring}></lightning-formatted-number>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-12">
+                    <span> </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Summer</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Fall</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <span>
+                        <strong>Spring</strong>
+                    </span>
+                </div>
+                <br />
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Teaching Total (%):</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Teaching_Total_FTE}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Teaching_Summer}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Teaching_Fall}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <span>
+                        <lightning-formatted-number value={Teaching_Spring}></lightning-formatted-number>
+                    </span>
+                </div>
+                <br />
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Disseration Chair Total (%):</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Dissertation_Chair_Total_FTE}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Dissertation_Chair_Summer}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Dissertation_Chair_Fall}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <span>
+                        <lightning-formatted-number value={Dissertation_Chair_Spring}></lightning-formatted-number>
+                    </span>
+                </div>
+                <br />
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Thesis Chair Total (%):</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Thesis_Chair_Total_FTE}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Thesis_Chair_Summer}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Thesis_Chair_Fall}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <span>
+                        <lightning-formatted-number value={Thesis_Chair_Spring}></lightning-formatted-number>
+                    </span>
+                </div>
+                <br />
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <strong>Other Total (%):</strong>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Other_Semester_Total_FTE}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Other_Summer}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <span>
+                        <lightning-formatted-number value={Other_Fall}></lightning-formatted-number>
+                    </span>
+                </div>
+                <div class="slds-col slds-size_4-of-12">
+                    <span>
+                        <lightning-formatted-number value={Other_Spring}></lightning-formatted-number>
+                    </span>
+                </div>
+            </div>
             </div>
         </template>
     </lightning-card>

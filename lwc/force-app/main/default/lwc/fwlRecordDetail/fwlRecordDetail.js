@@ -2,7 +2,7 @@ import { LightningElement, api, wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
 
 const fields = [
-    'Faculty_Workload__c.Name', 'Faculty_Workload__c.Division__c', 'Faculty_Workload__c.Teaching_Summer__c',
+    'Faculty_Workload__c.Teaching_Summer__c',
     'Faculty_Workload__c.Teaching_Fall__c', 'Faculty_Workload__c.Teaching_Spring__c', 
     'Faculty_Workload__c.Teaching_Total_FTE__c', 'Faculty_Workload__c.Dissertation_Chair_Summer__c',
     'Faculty_Workload__c.Dissertation_Chair_Fall__c', 'Faculty_Workload__c.Dissertation_Chair_Spring__c',
@@ -19,12 +19,6 @@ export default class FwlRecordDetail extends LightningElement {
     @wire(getRecord, { recordId: '$recordId', fields })
     fwl;
 
-    get Name() { 
-        return this.fwl.data.fields.Name.value; 
-    }
-    get Division() { 
-        return this.fwl.data.fields.Division__c.value; 
-    }
     get Teaching_Summer() { 
         return this.fwl.data.fields.Teaching_Summer__c.value; 
     }
