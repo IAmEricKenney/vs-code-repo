@@ -1,0 +1,180 @@
+<template>
+  <lightning-formatted-rich-text value="&lt;h1>Update the status of this review&lt;/h1>">
+  </lightning-formatted-rich-text>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={rev}>
+  </lightning-record-form>
+  <lightning-formatted-rich-text value="&lt;h2>Professional/Research Interests, Education, and Career Goals&lt;/h2>">
+  </lightning-formatted-rich-text>
+  <ul>
+    <li><strong>Excellent (4)</strong></li>
+    <li>
+      Well-articulated goals that are measurable and achievable<br />
+      Strongly align with geron specialty
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Good (3)</strong></li>
+    <li>
+      Defined goals are measurable and achievable<br />
+      Aligns with selected geron specialty
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Fair (2)</strong></li>
+    <li>
+      Goals are not clearly defined but experience suggests a good fit
+      academically for selected geron specialty
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Below average (1)</strong></li>
+    <li>
+      Goals are not clearly defined and are not likely to be achieved
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Poor (0)</strong></li>
+    <li>
+      No clear goals<br />
+      Poor alignment with geron specialty
+    </li>
+  </ul>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={wrkexp}>
+  </lightning-record-form>
+  <lightning-formatted-rich-text value="&lt;h2>Academic or Professional Achievements and Merits&lt;/h2>">
+  </lightning-formatted-rich-text>
+  <ul>
+    <li><strong>Excellent (4)</strong></li>
+    <li>
+      Notable, sustained high achievement (academically or professionally)
+      and notable professional award(s)
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Good (3)</strong></li>
+    <li>
+      Notable high achievement (academically/professionally) or notable
+      professional award(s)
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Fair (2)</strong></li>
+    <li>
+      May have achievements or awards but awards do not denote high
+      achievement relative to this program of study
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Below average (1)</strong></li>
+    <li>
+      Academically prepared for graduate school but no notable
+      achieve-ments or professional merits
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Poor (0)</strong></li>
+    <li>
+      No awards/achievement evident
+    </li>
+  </ul>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={spctrk}>
+  </lightning-record-form>
+  <lightning-formatted-rich-text value="&lt;h2>Leadership and Service&lt;/h2>">
+  </lightning-formatted-rich-text>
+  <ul>
+    <li><strong>Excellent (4)</strong></li>
+    <li>
+      Consistent, sustained leadership and service to CoN, University, or
+      community in significant ways
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Good (3)</strong></li>
+    <li>
+      Evidence of consistent and sustained service or leadership but not
+      both
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Fair (2)</strong></li>
+    <li>
+      Service/leadership inconsistent<br />
+      Recent service or leadership noted (less than one year)
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Below average (1)</strong></li>
+    <li>
+      Service or leadership only recently established (less than one year)
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Poor (0)</strong></li>
+    <li>
+      No evidence of leadership or service
+    </li>
+  </ul>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={ldrshp}>
+  </lightning-record-form>
+  <lightning-formatted-rich-text value="&lt;h2>Recommendations&lt;/h2>">
+  </lightning-formatted-rich-text>
+  <ul>
+    <li><strong>Excellent (4)</strong></li>
+    <li>
+      Letters are from reputable sources that appear to be knowledgeable
+      with regard to applicant’s leadership, service, or academic merit
+    </li>
+    <li>
+      Letters clearly explain and justify the outstanding qualities of the
+      applicant
+    </li>
+    <li>
+      Letters give numerous examples of how/why applicant stands out
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Good (3)</strong></li>
+    <li>
+      Letters are from reputable sources that appear to be knowledgeable
+      with regards to applicant’s leadership, service, or academic merit<br />
+      Letters explain and justify the high positive qualities of the
+      applicant<br />
+      Letters give an example of how/why applicant stands out
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Fair (2)</strong></li>
+    <li>
+      Letters are from reputable sources that appear to be knowledgeable
+      with regards to applicant’s leadership, service, or academic merit<br />
+      Letters attempt to explain and somewhat justify the positive
+      qualities of the applicant
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Below average (1)</strong></li>
+    <li>
+      Letters are from reputable sources that may/may not be knowledgeable
+      with regards to applicant’s leader-ship, service, or academic merit<br />
+      Letters attempt to explain and somewhat justify the positive
+      qualities of the applicant
+    </li>
+  </ul>
+  <ul>
+    <li><strong>Poor (0)</strong></li>
+    <li>
+      Letters are from sources that may not clearly be a knowledgeable
+      judge of the applicant’s leadership, service or academic merit<br />
+      Letters provide little concrete evidence to justify the positive
+      qualities of the applicant
+    </li>
+  </ul>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={recs}>
+  </lightning-record-form>
+  <lightning-formatted-rich-text value="&lt;h3>Does this person need an interview before admittance&lt;/h3>">
+  </lightning-formatted-rich-text>
+  <lightning-formatted-rich-text value="&lt;h3>Do you recommend admittance (Overall Impression)&lt;/h3>">
+  </lightning-formatted-rich-text>
+  <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={intv}>
+  </lightning-record-form>
+</template>

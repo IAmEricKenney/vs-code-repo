@@ -1,0 +1,8 @@
+<apex:page standardController="EnrollmentrxRx__Enrollment_Opportunity__c" 
+           applyBodyTag="true" >
+
+    <apex:iframe frameborder="false" rendered="true" 
+                 src="{!EnrollmentrxRx__Enrollment_Opportunity__c.Application_URL__c}" 
+                 scrolling="true" height="870px"/>        
+
+</apex:page>

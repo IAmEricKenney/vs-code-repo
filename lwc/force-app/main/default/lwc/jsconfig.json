@@ -2,7 +2,35 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/courseRecordDetail": [
+                "courseRecordDetail/courseRecordDetail.js"
+            ],
+            "c/geronReviewDetail": [
+                "geronReviewDetail/geronReviewDetail.js"
+            ],
+            "c/activityTypeRecordDetail": [
+                "activityTypeRecordDetail/activityTypeRecordDetail.js"
+            ],
+            "c/fwlRecordDetail": [
+                "fwlRecordDetail/fwlRecordDetail.js"
+            ],
+            "c/relatedContactsWithFilter": [
+                "relatedContactsWithFilter/relatedContactsWithFilter.js"
+            ],
+            "c/facultyListACC": [
+                "facultyListACC/facultyListACC.js"
+            ],
+            "c/facultyCareerLineFilter": [
+                "facultyCareerLineFilter/facultyCareerLineFilter.js"
+            ],
+            "c/filterContacts": [
+                "filterContacts/filterContacts.js"
+            ],
+            "c/nursEducationReviewDetail": [
+                "nursEducationReviewDetail/nursEducationReviewDetail.js"
+            ]
+        }
     },
     "include": [
         "**/*",

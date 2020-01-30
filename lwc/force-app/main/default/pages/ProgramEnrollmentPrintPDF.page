@@ -1,0 +1,100 @@
+<apex:page standardController="hed__Program_Enrollment__c" applyBodyTag="false" renderAs="PDF" extensions="ProgramEnrollmentPrintPDF">
+    <head>
+        <style type="text/css" media="print">
+            table {
+                border-collapse:collapse;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            tr {
+                border-style: solid;
+                border-color: gray;
+                padding: 10px;
+            }
+            th {
+                padding: 10px;
+                text-align: center;
+            }
+            tr.semesterRow{
+                background-color: gray;
+                color: white;
+                border-color: gray;
+                padding: 10px;
+            }
+            td.semesterRow{
+                background-color: gray;
+                color: white;
+                border-color: gray;
+                padding: 10px;
+            }
+            @page {
+            margin-left: 45px;
+            margin-right: 45px;
+            margin-top: 45px;
+            margin-bottom: 45px;
+            @top-center {
+            content: element(header);
+            }
+            @bottom-left {
+            content: element(footer);
+            content: "Page " counter(page)  " of " counter(pages);
+            }
+            }
+            div.header {
+            padding: 10px;
+            position: running(header);
+            }
+            div.footer {
+            display: block;
+            padding: 5px;
+            position: running(footer);
+            }
+            .pagenumber:before {
+            content: counter(page);
+            }
+            .pagecount:before {
+            content: counter(pages);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div><apex:outputText value="{!hed__Program_Enrollment__c.hed__Contact__r.LastName}" styleClass="Heading" /></div>
+        </div>
+        <h2><apex:outputText value="{!hed__Program_Enrollment__c.hed__Contact__r.LastName + ', ' + hed__Program_Enrollment__c.hed__Contact__r.FirstName + ' - ' + hed__Program_Enrollment__c.hed__Program_Plan__r.Name}" /></h2>
+        <table class="table">
+            <tr>
+                <th>Course Number</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+            </tr>
+            
+            <apex:repeat value="{!semesters}" var="semester" >
+                <tr class="semesterRow">
+                    <td class="semesterRow">
+                        {!semester.name}
+                    </td>
+                    <td class="semesterRow" align="right" colspan="2">Total Semester Credits: {!semester.ttlCredits}</td>
+                </tr>
+                <apex:repeat value="{!semester.courses}" var="course" >
+                    <tr>
+                        <td style="width:30%">
+                            {!course.courseId}
+                        </td>
+                        <td style="width:50%">
+                            {!course.name}
+                        </td>
+                        <td style="width:20%" align="right">
+                            {!course.credits}
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </apex:repeat>
+        </table>
+        <div align="right" style="font-size:20px">
+            Total Program Credits: {!totalCredits}
+        </div>
+    </body>
+</apex:page>

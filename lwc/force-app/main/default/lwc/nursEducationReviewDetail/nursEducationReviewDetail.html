@@ -1,0 +1,205 @@
+<template>
+  <lightning-card>
+    <lightning-formatted-rich-text value="&lt;h1>Update the status of this review&lt;/h1>">
+    </lightning-formatted-rich-text>
+    <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={rev}>
+    </lightning-record-form>
+    <div class="slds-m-around_medium">
+      <lightning-formatted-rich-text value="&lt;h2>Professional Experience&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Professional activities strongly align with nursing profession
+          Awards denote high achievement relative to nursing or health care,
+          professional certification.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Experience and/or achievement in nursing or health care suggest a
+          good fit. Preceptor, committee member, conference attendance.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          No evidence of nursing experience beyond nursing school.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={wrkexp}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Lifelong Learning&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Additional education activities beyond BSN with notable high
+          achievement, research and/or other notable awards. Non-nursing
+          masters in a relevant field.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Additional educational activities beyond BSN with notable
+          achievement. Other BA/BS with work experience in that field.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          Additional educational activities beyond BSN. Professional
+          work/certificate in other field or BA/BS in other field with no work
+          experience.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={lifelrn}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Leadership&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Demonstrates high leadership ability: train or supervise others,
+          organize and/or coordinate activities. Formal leadership roles
+          within or outside of nursing.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Demonstrates moderate leadership activities: local or national
+          organizational contributions or activities.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          Demonstrates beginning leadership skills, charge nurse, unit
+          committee member or chair, lead on QI project.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={ldrshp}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Knowledge of Role&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Demonstrates strong knowledge.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Demonstrates some knowledge.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          Demonstrates little knowledge.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={knwrl}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Statement of Fit&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Strong statement of fit with UU and specialty.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Statement of fit with UU and Specialty.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          Does not mention fit with UU or specialty.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={stmfit}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Alignment with Career Goals&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Career goals clearly stated and aligned.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Career goals appear aligned.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          Poor alignment with career goals.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={crgls}>
+      </lightning-record-form>
+      <lightning-formatted-rich-text value="&lt;h2>Contribution to the Profession&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>Accomplished (3)</strong></li>
+        <li>
+          Strong statement about continuing contribution.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Developing (2)</strong></li>
+        <li>
+          Includes statement on continuing contribution.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Beginning (1)</strong></li>
+        <li>
+          No mention of continuing contribution.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={cmtprof}>
+      </lightning-record-form>
+      <br />
+      <lightning-formatted-rich-text value="&lt;h2>Recommendations&lt;/h2>">
+      </lightning-formatted-rich-text>
+      <ul>
+        <li><strong>All ratings in top 10% (3)</strong></li>
+        <li>
+          Fully Supportive, addresses qualifications and potential.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Most ratings in top 10% (2)</strong></li>
+        <li>
+          Supportive but not enthusiastic, does not directly address
+          qualifications and potential.
+        </li>
+      </ul>
+      <ul>
+        <li><strong>Few ratings in top 10% (1)</strong></li>
+        <li>
+          Letter contains non-supportive statements or areas of concern.
+        </li>
+      </ul>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={recs}>
+      </lightning-record-form>
+      <br />
+      <lightning-formatted-rich-text value="&lt;h3>Do you recommend admittance&lt;/h3>">
+      </lightning-formatted-rich-text>
+      <lightning-record-form record-id={recordId} object-api-name="Application_Review__c" fields={imp}>
+      </lightning-record-form>
+    </div>
+  </lightning-card>
+</template>

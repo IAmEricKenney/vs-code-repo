@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Career Line Filter" icon-name="custom:custom67">
+        <template if:true={picklistValues.data}>
+            <div class="slds-m-around_medium">
+                <template for:each={picklistValues.data.values} for:item="item">
+                    <lightning-input
+                        key={item.value}
+                        label={item.label}
+                        data-value={item.value}
+                        type="checkbox"
+                        onchange={handleChange}
+                        checked>
+                    </lightning-input>
+                </template>
+            <br>
+            </br>
+                <lightning-button 
+                    variant="brand" 
+                    label="Filter" 
+                    title="Filter by Name" 
+                    onclick={handleClick} 
+                    class="slds-m-left_x-small">
+                </lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

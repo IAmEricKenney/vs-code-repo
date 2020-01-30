@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="ACC Active Faculty" icon-name="standard:person_account">
+        <lightning-datatable
+            key-field="Id"
+            data={contacts.data}
+            columns={columns}
+            onchange={filterkeysubmit}>
+        </lightning-datatable>
+    </lightning-card>
+</template>
