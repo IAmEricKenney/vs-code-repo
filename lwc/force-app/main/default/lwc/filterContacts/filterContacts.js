@@ -29,6 +29,7 @@ export default class FilterContacts extends LightningElement {
      * Don’t use ID selectors with querySelector. The IDs that you define in HTML templates
      *  may be transformed into globally unique values when the template is rendered.
      */
+
     let filterBox = this.template.querySelector("lightning-input");
     let filterKeyValue = filterBox.checked;
     this.submittedFilterValue = filterKeyValue;
@@ -51,20 +52,4 @@ export default class FilterContacts extends LightningElement {
     // Dispatches the event.
     this.dispatchEvent(selectedEvent);
   }
-  /**
-   * let compArr=this.template.querySelectorAll('lightning-input');
-   *
-   * for(let i=0;i<compArr.length;i++){
-   *  if(compArr[0].Name==="xxx"){
-   *      Do something with "xxx" component
-   *  }
-   *
-   *  if(compArr[1].Name==="yyy"){
-   *      Do something with "yyy" component
-   *  }
-   *
-   * }
-   *
-   *
-   */
 }
