@@ -29,6 +29,9 @@
             ],
             "c/relatedContactsWithFilter": [
                 "relatedContactsWithFilter/relatedContactsWithFilter.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
             ]
         }
     },
