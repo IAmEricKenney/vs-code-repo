@@ -88,7 +88,7 @@ export default class FilterContacts extends LightningElement {
   }
 
   handleClick() {
-    let filterSelect = this.template.querySelectorAll("lightning-input");
+    let filterSelect = this.template.querySelectorAll('lightning-input');
     this.submittedFilterValues = [];
     for (let i = 0; i < filterSelect.length; i++) {
       let item = filterSelect[i];
@@ -99,10 +99,10 @@ export default class FilterContacts extends LightningElement {
 
     //item below can be removed -- only used to validate the array has values
     console.log(
-      "number of boxes selected: " + this.submittedFilterValues.length
+      'number of boxes selected: ' + this.submittedFilterValues.length
     );
     for (let n = 0; n < this.submittedFilterValues.length; n++) {
-      console.log("Item # " + this.submittedFilterValues[n]);
+      console.log('Item # ' + this.submittedFilterValues[n]);
     }
 
     //fire toast event
@@ -114,7 +114,7 @@ export default class FilterContacts extends LightningElement {
       })
     );
 
-    fireEvent(this.pageRef, "filterKeySubmit", this.submittedFilterValues);
+    fireEvent(this.pageRef, 'filterKeySubmit', this.submittedFilterValues);
 
     // removed this action to add support for pubsub communication between components
     //  const selectedEvent = new CustomEvent("filterKeySubmit",{
