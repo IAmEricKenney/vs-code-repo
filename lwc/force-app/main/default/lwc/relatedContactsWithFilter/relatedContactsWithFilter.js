@@ -133,8 +133,8 @@ export default class RelatedContactsWithFilter extends LightningElement {
 
   //Lifecycle hook which fires when a component is inserted into the DOM
   connectedCallback() {
-    this.loadRelatedContacts("");
     registerListener('filterValueSubmit', this.handleFilterValueSubmit, this); //register listener for pubsub event
+    this.loadRelatedContacts("");
   }
 
   //added to support pubsub events
@@ -158,17 +158,13 @@ export default class RelatedContactsWithFilter extends LightningElement {
       });
   }
 
-  handleFilterKeySubmit(event) {
-    let filterKey = event.detail;
-    this.loadRelatedContacts(filterKey);
-  }
-
   // handler for pubsub event initiated by sibling component
   // incoming value will be an array of search terms.
   // need to include logic to split array values before passing to APEX
   handleFilterValueSubmit(searchValue) {
     console.log('handleFilterValueSubmit fired: ' + searchValue);
     this.filterValues = JSON.stringify(searchValue);
+    this.loadRelatedContacts(JSON.stringify(searchValue));
   }
 
   loadMoreData(event) {

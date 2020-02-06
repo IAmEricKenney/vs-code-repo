@@ -114,7 +114,7 @@ export default class FilterContacts extends LightningElement {
       })
     );
 
-    fireEvent(this.pageRef, 'filterKeySubmit', this.submittedFilterValues);
+    fireEvent(this.pageRef, 'filterValueSubmit', this.submittedFilterValues);
 
     // removed this action to add support for pubsub communication between components
     //  const selectedEvent = new CustomEvent("filterKeySubmit",{
