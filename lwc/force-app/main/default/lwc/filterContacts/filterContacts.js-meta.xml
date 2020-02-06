@@ -5,13 +5,10 @@
     <masterLabel>Filter Contacts</masterLabel>
     <description>Displays a section to filter Contacts by Name</description>
     <targets>
-        <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>
         <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
     </targets>
-    <targetConfigs>
-        <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
-            <property name="componentLabel" type="String"/>
-        </targetConfig>
-    </targetConfigs>
 </LightningComponentBundle>

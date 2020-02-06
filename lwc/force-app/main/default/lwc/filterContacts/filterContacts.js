@@ -98,12 +98,12 @@ export default class FilterContacts extends LightningElement {
     }
 
     //item below can be removed -- only used to validate the array has values
-    console.log(
-      'number of boxes selected: ' + this.submittedFilterValues.length
-    );
-    for (let n = 0; n < this.submittedFilterValues.length; n++) {
-      console.log('Item # ' + this.submittedFilterValues[n]);
-    }
+    // console.log(
+    //   'number of boxes selected: ' + this.submittedFilterValues.length
+    // );
+    // for (let n = 0; n < this.submittedFilterValues.length; n++) {
+    //   console.log('Item # ' + this.submittedFilterValues[n]);
+    // }
 
     //fire toast event
     this.dispatchEvent(

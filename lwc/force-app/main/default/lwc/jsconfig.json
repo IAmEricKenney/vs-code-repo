@@ -9,12 +9,6 @@
             "c/courseRecordDetail": [
                 "courseRecordDetail/courseRecordDetail.js"
             ],
-            "c/facultyCareerLineFilter": [
-                "facultyCareerLineFilter/facultyCareerLineFilter.js"
-            ],
-            "c/facultyListACC": [
-                "facultyListACC/facultyListACC.js"
-            ],
             "c/filterContacts": [
                 "filterContacts/filterContacts.js"
             ],

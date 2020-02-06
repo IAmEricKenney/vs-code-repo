@@ -1,8 +1,8 @@
 @IsTest
-public class facultyListACC_Class_Test {
+public with sharing class ContactController_Test {
 
     @IsTest
-    static void createFacACCTest() {
+    static void ContactControllerTest() {
         String acc = 'Acute and Chronic Care';
         String a;
         Id idRecordId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName().get('Faculty_Staff').
@@ -22,6 +22,5 @@ public class facultyListACC_Class_Test {
         c.Credentials__c = 'ABC';
         c.Employment_Status__c = 'Full-Time';
         update c;
-
     }
 }
