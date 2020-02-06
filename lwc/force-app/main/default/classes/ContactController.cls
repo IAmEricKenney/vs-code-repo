@@ -35,7 +35,7 @@ public without sharing class ContactController {
     if (key != null && key != ''){ 
       List<String> keyList = new List<String>(parseJSON(key));
       Set<String> keySet = new Set<String>(keyList);
-      query = query + ' AND Career_Line__c IN :keySet';
+      query = query + ' AND Career_Line__c IN :keySet ORDER BY Name_and_Credentials__c ASC';
      }
 		return Database.query(query);
 	}

@@ -113,6 +113,7 @@ import { CurrentPageReference } from "lightning/navigation";
 import { registerListener, unregisterAllListeners, fireEvent } from "c/pubsub";
 
 const COLUMNS = [
+  { label: "Id", fieldName: "Id" },
   { label: "Name", fieldName: "Name_and_Credentials__c", sortable: true },
   { label: "Title", fieldName: "Title" },
   { label: "Career Line", fieldName: "Career_Line__c", sortable: true }
@@ -162,7 +163,7 @@ export default class RelatedContactsWithFilter extends LightningElement {
   // incoming value will be an array of search terms.
   // need to include logic to split array values before passing to APEX
   handleFilterValueSubmit(searchValue) {
-    console.log('handleFilterValueSubmit fired: ' + searchValue);
+    //console.log('handleFilterValueSubmit fired: ' + searchValue);
     this.filterValues = JSON.stringify(searchValue);
     this.loadRelatedContacts(JSON.stringify(searchValue));
   }
