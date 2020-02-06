@@ -21,7 +21,6 @@ const COLUMNS = [
     }
   }
 ];
-
 export default class RelatedContactsWithFilter extends NavigationMixin(LightningElement) {
   @wire(CurrentPageReference) pageRef; //added to support pubsub component communication
   @api recordId; //Inherits Account Record Id from Account Record Page
@@ -36,7 +35,7 @@ export default class RelatedContactsWithFilter extends NavigationMixin(Lightning
     this.record = event.detail.row;
     // View a custom object record.
     this[NavigationMixin.Navigate]({
-      type: "standard__recordPage",
+      type: "standard__RecordPage",
       attributes: {
         recordId: this.record.id,
         objectApiName: 'Contact', // objectApiName is optional
