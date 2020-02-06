@@ -5,7 +5,7 @@
                 <span>
                     <lightning-datatable key-field="Id" data={data} columns={columns} hide-checkbox-column
                         onloadmore={loadMoreData} sorted-by={sortBy} sorted-direction={sortDirection}
-                        onsort={handleSortdata}>
+                        onsort={handleSortdata} onrowaction={navigateToRecordViewPage}>
                     </lightning-datatable>
                 </span>
             </div>
