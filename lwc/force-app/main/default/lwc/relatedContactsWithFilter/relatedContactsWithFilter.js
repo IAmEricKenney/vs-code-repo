@@ -113,8 +113,9 @@ import { CurrentPageReference } from "lightning/navigation";
 import { registerListener, unregisterAllListeners, fireEvent } from "c/pubsub";
 
 const COLUMNS = [
-  { label: "Id", fieldName: "Id" },
-  { label: "Name", fieldName: "Name_and_Credentials__c", sortable: true },
+  { label: "First Name", fieldName: "FirstName", sortable: true },
+  { label: "Last Name", fieldName: "LastName", sortable: true },
+  { label: "Credentials", fieldName: "Credentials__c" },
   { label: "Title", fieldName: "Title" },
   { label: "Career Line", fieldName: "Career_Line__c", sortable: true }
 ];
