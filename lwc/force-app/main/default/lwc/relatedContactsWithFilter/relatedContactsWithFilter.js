@@ -15,23 +15,25 @@ const COLUMNS = [
   { label: "Career Line", fieldName: "Career_Line__c", sortable: true },
   { type: "action", typeAttributes: { rowActions: actions } }
 ];
-export default class RelatedContactsWithFilter extends NavigationMixin(LightningElement) {
+export default class RelatedContactsWithFilter extends NavigationMixin(
+  LightningElement
+) {
   @wire(CurrentPageReference) pageRef; //added to support pubsub component communication
   @api recordId; //Inherits Account Record Id from Account Record Page
 
   @track columns = COLUMNS;
   @track data = [];
   @track loadMoreStatus;
-//  @api totalNumberOfRows;
 
   navigateToRecordViewPage(event) {
     this.record = event.detail.row;
     // View a custom object record.
+    // console.log('Navigate to record: '+ (this.record.Id));
     this[NavigationMixin.Navigate]({
-      type: "standard__RecordPage",
+      type: "standard__recordPage",
       attributes: {
-        recordId: this.record.id,
-        objectApiName: 'Contact', // objectApiName is optional
+        recordId: this.record.Id,
+        objectApiName: "Contact", // objectApiName is optional
         actionName: "view"
       }
     });
@@ -64,6 +66,22 @@ export default class RelatedContactsWithFilter extends NavigationMixin(Lightning
       });
   }
 
+  // loadDefaultContacts(filterKey) {
+  //   getRelatedContacts({ accountId: this.recordId, key: filterKey })
+  //     .then(results => {
+  //       this.data = results;
+  //     })
+  //     .catch(error => {
+  //       this.dispatchEvent(
+  //         new ShowToastEvent({
+  //           title: "Error",
+  //           message: error.body.message,
+  //           variant: "error"
+  //         })
+  //       );
+  //     });
+  // }
+
   // handler for pubsub event initiated by sibling component
   // incoming value will be an array of search terms.
   // need to include logic to split array values before passing to APEX
@@ -72,26 +90,6 @@ export default class RelatedContactsWithFilter extends NavigationMixin(Lightning
     this.filterValues = JSON.stringify(searchValue);
     this.loadRelatedContacts(JSON.stringify(searchValue));
   }
-
-  // loadMoreData(event) {
-  //   //Display a spinner to signal that data is being loaded
-  //   event.target.isLoading = true;
-  //   //Display "Loading" when more data is being loaded
-  //   this.loadMoreStatus = "Loading";
-  //   getRelatedContactsByFilter(50).then(data => {
-  //     if (data.length >= this.totalNumberOfRows) {
-  //       event.target.enableInfiniteLoading = false;
-  //       this.loadMoreStatus = "No more data to load";
-  //     } else {
-  //       const currentData = this.data;
-  //       //Appends new data to the end of the table
-  //       const newData = currentData.concat(data);
-  //       this.data = newData;
-  //       this.loadMoreStatus = "";
-  //     }
-  //     event.target.isLoading = false;
-  //   });
-  // }
 
   handleSortdata(event) {
     // field name
