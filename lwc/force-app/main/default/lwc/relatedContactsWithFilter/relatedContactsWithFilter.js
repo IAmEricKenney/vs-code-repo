@@ -2,7 +2,6 @@ import { LightningElement, api, track, wire } from "lwc";
 import getRelatedContactsByFilter from "@salesforce/apex/ContactController.getRelatedContactsByFilter";
 //import getRelatedContacts from "@salesforce/apex/ContactController.getRelatedContacts";
 import { NavigationMixin } from "lightning/navigation";
-//import { flatten } from 'c/jsUtils';
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 //next two added to support pubsub component communication
@@ -14,22 +13,16 @@ const COLUMNS = [
   { label: "Name", fieldName: "Name_and_Credentials__c", sortable: true },
   { label: "Title", fieldName: "Title" },
   { label: "Career Line", fieldName: "Career_Line__c", sortable: true },
-  {
-    type: "action",
-    typeAttributes: {
-      rowActions: actions
-    }
-  }
+  { type: "action", typeAttributes: { rowActions: actions } }
 ];
 export default class RelatedContactsWithFilter extends NavigationMixin(LightningElement) {
   @wire(CurrentPageReference) pageRef; //added to support pubsub component communication
   @api recordId; //Inherits Account Record Id from Account Record Page
 
   @track columns = COLUMNS;
-  //@track data;
   @track data = [];
   @track loadMoreStatus;
-  @api totalNumberOfRows;
+//  @api totalNumberOfRows;
 
   navigateToRecordViewPage(event) {
     this.record = event.detail.row;
@@ -80,25 +73,25 @@ export default class RelatedContactsWithFilter extends NavigationMixin(Lightning
     this.loadRelatedContacts(JSON.stringify(searchValue));
   }
 
-  loadMoreData(event) {
-    //Display a spinner to signal that data is being loaded
-    event.target.isLoading = true;
-    //Display "Loading" when more data is being loaded
-    this.loadMoreStatus = "Loading";
-    getRelatedContactsByFilter(50).then(data => {
-      if (data.length >= this.totalNumberOfRows) {
-        event.target.enableInfiniteLoading = false;
-        this.loadMoreStatus = "No more data to load";
-      } else {
-        const currentData = this.data;
-        //Appends new data to the end of the table
-        const newData = currentData.concat(data);
-        this.data = newData;
-        this.loadMoreStatus = "";
-      }
-      event.target.isLoading = false;
-    });
-  }
+  // loadMoreData(event) {
+  //   //Display a spinner to signal that data is being loaded
+  //   event.target.isLoading = true;
+  //   //Display "Loading" when more data is being loaded
+  //   this.loadMoreStatus = "Loading";
+  //   getRelatedContactsByFilter(50).then(data => {
+  //     if (data.length >= this.totalNumberOfRows) {
+  //       event.target.enableInfiniteLoading = false;
+  //       this.loadMoreStatus = "No more data to load";
+  //     } else {
+  //       const currentData = this.data;
+  //       //Appends new data to the end of the table
+  //       const newData = currentData.concat(data);
+  //       this.data = newData;
+  //       this.loadMoreStatus = "";
+  //     }
+  //     event.target.isLoading = false;
+  //   });
+  // }
 
   handleSortdata(event) {
     // field name
