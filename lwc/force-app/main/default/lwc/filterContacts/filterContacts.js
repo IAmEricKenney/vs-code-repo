@@ -1,11 +1,12 @@
+// import LWC frameworks
 import { LightningElement, track, api, wire } from "lwc";
-//import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import { getPicklistValues } from "lightning/uiObjectInfoApi";
 
 // mbw - next two lines added for sibling component communication
 import { CurrentPageReference } from "lightning/navigation";
 import { fireEvent } from "c/pubsub";
 
+// imports the Career Line picklist value to be used in the filter
 import CAREER_LINE from "@salesforce/schema/Contact.Career_Line__c";
 
 export default class FilterContacts extends LightningElement {
@@ -27,10 +28,12 @@ export default class FilterContacts extends LightningElement {
   @api componentLabel;
   //@api filterLabel; //Input from parent component
 
-  handleChange(event) {
-    this.filterValue = event.target.checked;
-  }
+  // Method not used
+  // handleChange(event) {
+  //   this.filterValue = event.target.checked;
+  // }
 
+  // Method to activate the filter changes and update datatable
   handleClick() {
     let filterSelect = this.template.querySelectorAll("lightning-input");
     this.submittedFilterValues = [];
@@ -43,6 +46,7 @@ export default class FilterContacts extends LightningElement {
     fireEvent(this.pageRef, "filterValueSubmit", this.submittedFilterValues);
   }
 
+  // Method called when Reset button is clicked to return values to default
   handleResetClick() {
     let filterSelect = this.template.querySelectorAll("lightning-input");
     filterSelect.forEach(fs => {
@@ -59,27 +63,3 @@ export default class FilterContacts extends LightningElement {
     fireEvent(this.pageRef, "filterValueSubmit", this.submittedFilterValues);
   }
 }
-
-// this.dispatchEvent(
-//   new ShowToastEvent({
-//     title: "Checkbox Selections",
-//     message: JSON.stringify(this.submittedFilterValues),
-//     variant: "success"
-//   })
-// );
-
-//item below can be removed -- only used to validate the array has values
-//console.log( fake );
-//   'number of boxes selected: ' + this.submittedFilterValues.length
-// );
-// for (let n = 0; n < this.submittedFilterValues.length; n++) {
-//   console.log('Item # ' + this.submittedFilterValues[n]);
-// }
-
-//fire toast event
-
-// removed this action to add support for pubsub communication between components
-//  const selectedEvent = new CustomEvent("filterKeySubmit",{
-//    detail: this.submittedFilterValues
-//  });
-//  this.dispatchEvent(selectedEvent);

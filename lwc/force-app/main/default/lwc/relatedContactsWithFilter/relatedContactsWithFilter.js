@@ -1,6 +1,5 @@
+// import LWC frameworks
 import { LightningElement, api, track, wire } from "lwc";
-import getRelatedContactsByFilter from "@salesforce/apex/ContactController.getRelatedContactsByFilter";
-//import getRelatedContacts from "@salesforce/apex/ContactController.getRelatedContacts";
 import { NavigationMixin } from "lightning/navigation";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
@@ -8,7 +7,13 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import { CurrentPageReference } from "lightning/navigation";
 import { registerListener, unregisterAllListeners } from "c/pubsub";
 
+// import apex class to display data
+import getRelatedContactsByFilter from "@salesforce/apex/ContactController.getRelatedContactsByFilter";
+
+// constructs the in line action button to view record
 const actions = [{ label: "View", name: "show_details" }];
+
+//creates data structure for lightning datatable
 const COLUMNS = [
   { label: "Name", fieldName: "Name_and_Credentials__c", sortable: true },
   { label: "Title", fieldName: "Title" },
@@ -23,17 +28,17 @@ export default class RelatedContactsWithFilter extends NavigationMixin(
 
   @track columns = COLUMNS;
   @track data = [];
-  @track loadMoreStatus;
+  // @track loadMoreStatus; (Not used, maybe not necessary)
 
+  // Event to open record page from datatable
   navigateToRecordViewPage(event) {
     this.record = event.detail.row;
     // View a custom object record.
-    // console.log('Navigate to record: '+ (this.record.Id));
     this[NavigationMixin.Navigate]({
       type: "standard__recordPage",
       attributes: {
         recordId: this.record.Id,
-        objectApiName: "Contact", // objectApiName is optional
+        objectApiName: "Contact",
         actionName: "view"
       }
     });
@@ -50,6 +55,7 @@ export default class RelatedContactsWithFilter extends NavigationMixin(
     unregisterAllListeners(this);
   }
 
+  // Event to loads datatable
   loadRelatedContacts(filterKey) {
     getRelatedContactsByFilter({ accountId: this.recordId, key: filterKey })
       .then(results => {
@@ -66,31 +72,15 @@ export default class RelatedContactsWithFilter extends NavigationMixin(
       });
   }
 
-  // loadDefaultContacts(filterKey) {
-  //   getRelatedContacts({ accountId: this.recordId, key: filterKey })
-  //     .then(results => {
-  //       this.data = results;
-  //     })
-  //     .catch(error => {
-  //       this.dispatchEvent(
-  //         new ShowToastEvent({
-  //           title: "Error",
-  //           message: error.body.message,
-  //           variant: "error"
-  //         })
-  //       );
-  //     });
-  // }
-
   // handler for pubsub event initiated by sibling component
   // incoming value will be an array of search terms.
   // need to include logic to split array values before passing to APEX
   handleFilterValueSubmit(searchValue) {
-    //console.log('handleFilterValueSubmit fired: ' + searchValue);
     this.filterValues = JSON.stringify(searchValue);
     this.loadRelatedContacts(JSON.stringify(searchValue));
   }
 
+  // Event to make columns sortable
   handleSortdata(event) {
     // field name
     this.sortBy = event.detail.fieldName;

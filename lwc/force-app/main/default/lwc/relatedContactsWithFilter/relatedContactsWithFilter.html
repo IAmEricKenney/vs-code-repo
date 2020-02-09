@@ -4,12 +4,13 @@
             <div class="slds-col slds-size_3-of-3">
                 <span>
                     <lightning-datatable key-field="Id" data={data} columns={columns} hide-checkbox-column
-                        onloadmore={loadMoreData} sorted-by={sortBy} sorted-direction={sortDirection}
-                        onsort={handleSortdata} onrowaction={navigateToRecordViewPage}>
+                        sorted-by={sortBy} sorted-direction={sortDirection} onsort={handleSortdata}
+                        onrowaction={navigateToRecordViewPage}>
                     </lightning-datatable>
                 </span>
             </div>
-            <!-- <div class="slds-col slds-size_1-of-3">
+            <!-- Child component, currently using a pub/sub instead 
+                <div class="slds-col slds-size_1-of-3"> 
                    <span>
                     <c-filter-contacts component-label="Filter Contacts" onfilterkeysubmit={handleFilterKeySubmit}>
                     </c-filter-contacts>
