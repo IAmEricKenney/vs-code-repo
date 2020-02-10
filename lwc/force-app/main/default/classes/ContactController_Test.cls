@@ -21,6 +21,7 @@ public with sharing class ContactController_Test {
         c.hed__Primary_Organization__c = a;
         c.Credentials__c = 'ABC';
         c.Employment_Status__c = 'Full-Time';
+        c.Career_Line__c = 'Adjunct';
         update c;
     }
 }
