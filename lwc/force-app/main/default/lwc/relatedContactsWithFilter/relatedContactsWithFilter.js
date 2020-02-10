@@ -30,20 +30,6 @@ export default class RelatedContactsWithFilter extends NavigationMixin(
   @track data = [];
   // @track loadMoreStatus; (Not used, maybe not necessary)
 
-  // Event to open record page from datatable
-  navigateToRecordViewPage(event) {
-    this.record = event.detail.row;
-    // View a custom object record.
-    this[NavigationMixin.Navigate]({
-      type: "standard__recordPage",
-      attributes: {
-        recordId: this.record.Id,
-        objectApiName: "Contact",
-        actionName: "view"
-      }
-    });
-  }
-
   //Lifecycle hook which fires when a component is inserted into the DOM
   connectedCallback() {
     registerListener("filterValueSubmit", this.handleFilterValueSubmit, this); //register listener for pubsub event
@@ -116,4 +102,17 @@ export default class RelatedContactsWithFilter extends NavigationMixin(
     // set the sorted data to data table data
     this.data = parseData;
   }
+    // Event to open record page from datatable
+    navigateToRecordViewPage(event) {
+      this.record = event.detail.row;
+      // View a custom object record.
+      this[NavigationMixin.Navigate]({
+        type: "standard__recordPage",
+        attributes: {
+          recordId: this.record.Id,
+          objectApiName: "Contact",
+          actionName: "view"
+        }
+      });
+    }
 }
