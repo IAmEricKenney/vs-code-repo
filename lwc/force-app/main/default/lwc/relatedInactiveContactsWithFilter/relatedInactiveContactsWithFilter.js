@@ -8,7 +8,7 @@ import { CurrentPageReference } from "lightning/navigation";
 import { registerListener, unregisterAllListeners } from "c/pubsub";
 
 // import apex class to display data
-import getRelatedContactsByFilter from "@salesforce/apex/ContactController.getInactiveContactsByFilter";
+import getRelatedInactiveContacts from "@salesforce/apex/ContactController.getInactiveContactsByFilter";
 
 // constructs the in line action button to view record
 const actions = [{ label: "View", name: "show_details" }];
@@ -43,7 +43,7 @@ export default class RelatedInactiveContactsWithFilter extends NavigationMixin(
 
   // Event to loads datatable
   loadRelatedContacts(filterKey) {
-    getRelatedContactsByFilter({ accountId: this.recordId, key: filterKey })
+    getRelatedInactiveContacts({ accountId: this.recordId, key: filterKey })
       .then(results => {
         this.data = results;
       })

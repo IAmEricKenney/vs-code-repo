@@ -5,6 +5,26 @@ public class TestDataFactory {
         	Name = 'Test'
         );
     }
+    public static Account getOrganization(){
+        return new Account(
+            Name = 'Acute and Chronic Care',
+            RecordTypeId = '0120B000000apZxQAI'
+        );
+    }
+    public static Contact getFaculty(Id accountId){
+        return new Contact(
+            LastName = 'Faculty',
+            FirstName = 'Test',
+            hed__AlternateEmail__c = 'noemail@noemail.com',
+            hed__Preferred_Email__c = 'Alternate',
+            hed__Primary_Organization__c = accountId,
+            Credentials__c = 'ABC',
+            Employment_Status__c = 'Full-Time',
+            Career_Line__c = 'Adjunct',
+            Title ='Fake Title',
+            RecordTypeId = '0120d000000Q914AAC'
+        );
+    }
     
     // HED namespace
     public static hed__Term__c getProgTerm( Id accountId ){

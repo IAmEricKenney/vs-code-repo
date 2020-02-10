@@ -1,0 +1,43 @@
+public with sharing class ReviewerController {
+	@AuraEnabled(cacheable = true)
+	public static Application_Review__c getCurrentReview() {
+		return [SELECT Id, 
+			    GR_Career_goals_align__c, 
+				GR_Commitment_to_furthering_the_profess__c, 
+				GR_Community_Service_Area_of_Service__c, 
+				GR_Community_Service_Frequency__c, 
+                GR_Final_Impression__c, 
+                GR_Goal_Statement_Notes__c,
+				GR_GPA_Notes__c, 
+                GR_GPA_Score__c, 
+                GR_Interview_Decision_Notes__c,
+				GR_Interview_Invite__c, 
+                GR_Language_Fluency__c, 
+                GR_Leadership__c,
+				GR_Leadership_Notes__c, 
+                GR_Lifelong_Learning__c, 
+                GR_LOR_1_Letter_Strength__c,
+				GR_LOR_1_Evaluation_Profile__c,
+				GR_LOR_2_Letter_Strength__c, 
+                GR_LOR_2_Evaluation_Profile__c,
+				GR_LOR_3_Letter_Strength__c, 
+                GR_LOR_3_Evaluation_Profile__c,
+				GR_Nursing_GPA_Score__c,
+                GR_Personal_Attributes_Notes__c,
+                GR_Recommendation_Notes__c,
+				GR_Specialty_Track_Experience_Score__c, 
+                GR_Specialty_Track_Experience_Notes__c,
+                GR_Statement_of_Fit__c,
+				GR_Underserved_Rural__c,
+                GR_Understands_NP_Role__c,
+                GR_Variety_of_populations__c,
+				GR_Work_Experience_Score__c, 
+				GR_Work_Experience_Notes__c, 
+                GR_Writing_Score__c,
+				Overall_Impression__c,
+                Review_Status__c,
+                Reviewer_Name__c,
+				GR_Combined_Score__c
+				FROM Application_Review__c LIMIT 1];
+	}
+}

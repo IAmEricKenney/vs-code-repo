@@ -1,24 +1,5 @@
 public without sharing class ContactController {
   @AuraEnabled(cacheable = true) 
-  public static List<Contact> getRelatedContacts(Id accountId) {
-    return [SELECT Id, 
-            FirstName, 
-            Name_and_Credentials__c, 
-            Title, Career_Line__c, 
-            Employment_Status__c 
-            FROM Contact 
-            WHERE hed__Primary_Organization__c = :accountId 
-            AND (Career_Line__c = 'Adjunct' 
-            OR Career_Line__c = 'Clinical' 
-            OR Career_Line__c = 'Research'
-            OR Career_Line__c = 'Tenure Track') 
-            AND (Employment_Status__c != 'Inactive' 
-            OR Employment_Status__c != 'Retired') 
-            ORDER BY FirstName ASC 
-            LIMIT 125];
-	}
-
-  @AuraEnabled(cacheable = true) 
   public static List<Contact> getRelatedContactsByFilter(Id accountId, String key) {
     String inactive = '\'Inactive\'';
 	  String retired = '\'Retired\'';
@@ -67,3 +48,22 @@ public without sharing class ContactController {
 		return (List<String>) System.JSON.deserialize(json, List<String>.class);
 	}
 }
+
+  //@AuraEnabled(cacheable = true) 
+  // public static List<Contact> getRelatedContacts(Id accountId) {
+  //   return [SELECT Id, 
+  //           FirstName, 
+  //           Name_and_Credentials__c, 
+  //           Title, Career_Line__c, 
+  //           Employment_Status__c 
+  //           FROM Contact 
+  //           WHERE hed__Primary_Organization__c = :accountId 
+  //           AND (Career_Line__c = 'Adjunct' 
+  //           OR Career_Line__c = 'Clinical' 
+  //           OR Career_Line__c = 'Research'
+  //           OR Career_Line__c = 'Tenure Track') 
+  //           AND (Employment_Status__c != 'Inactive' 
+  //           OR Employment_Status__c != 'Retired') 
+  //           ORDER BY FirstName ASC 
+  //           LIMIT 125];
+	// }
