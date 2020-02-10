@@ -1,5 +1,5 @@
 @IsTest
-public class AutocreatedConfigSelfReg1581097351244_Test {
+public class AutocreatedConfigSelfReg1581097351244Tst {
     @IsTest
     static void createUser_Test() {
 		Contact c = new Contact(
