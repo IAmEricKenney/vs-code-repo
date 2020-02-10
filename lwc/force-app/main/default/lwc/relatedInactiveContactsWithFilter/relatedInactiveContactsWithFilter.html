@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_3-of-3">
+                <span>
+                    <lightning-datatable key-field="Id" data={data} columns={columns} hide-checkbox-column
+                        sorted-by={sortBy} sorted-direction={sortDirection} onsort={handleSortdata}
+                        onrowaction={navigateToRecordViewPage}>
+                    </lightning-datatable>
+                </span>
+            </div>
+            <!-- Child component, currently using a pub/sub instead 
+                <div class="slds-col slds-size_1-of-3"> 
+                   <span>
+                    <c-filter-contacts component-label="Filter Contacts" onfilterkeysubmit={handleFilterKeySubmit}>
+                    </c-filter-contacts>
+                </span> 
+            </div> -->
+        </div>
+    </lightning-card>
+</template>

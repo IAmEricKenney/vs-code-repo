@@ -26,6 +26,9 @@
             ],
             "c/relatedContactsWithFilter": [
                 "relatedContactsWithFilter/relatedContactsWithFilter.js"
+            ],
+            "c/relatedInactiveContactsWithFilter": [
+                "relatedInactiveContactsWithFilter/relatedInactiveContactsWithFilter.js"
             ]
         }
     },
