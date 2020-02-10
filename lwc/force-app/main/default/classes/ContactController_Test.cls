@@ -19,5 +19,17 @@ public class ContactController_Test {
         c.hed__AlternateEmail__c = 'noemail@noemail.com';
         c.hed__Preferred_Email__c = 'Alternate';
         insert c;
+
+        Contact c2 = new Contact();
+        c2.LastName = 'Sample';
+        c2.hed__Primary_Organization__c = a.id;
+        c2.RecordTypeId = '0120d000000Q914AAC';
+        c2.Credentials__c = 'DEF';
+        c2.Employment_Status__c = 'Retired';
+        c2.Career_Line__c = 'Clinical';
+        c2.Title = 'Fake Title';
+        c2.hed__AlternateEmail__c = 'sample@sample.com';
+        c2.hed__Preferred_Email__c = 'Alternate';
+        insert c2;
     }
 }
