@@ -1,35 +1,67 @@
-@IsTest
+@ IsTest
 public class ContactController_Test {
+	@IsTest
+	static void createContact() {
+		Account a = new Account();
+		a.RecordTypeId = '0120B000000apZxQAI';
+		a.Name = 'Acute and Chronic Care';
+		insert a;
 
-    @IsTest
-    static void createContact() {
-        Account a = new Account();
-        a.RecordTypeId = '0120B000000apZxQAI';
-        a.Name = 'Acute and Chronic Care';
-        insert a;
+		Test.startTest();
+		List<Contact> con = new List<Contact>();
+		for (Integer count = 0; count < 10; count ++) {
+			Contact c = new Contact();
+			String ln = count + 'Frost' + count;
+			c.LastName = ln;
+			String fn = count + 'Jack' + count;
+			c.FirstName = fn;
+			c.hed__AlternateEmail__c = ln + count + '@' + fn + count + '.com';
+			c.hed__Primary_Organization__c = a.id;
+			c.RecordTypeId = '0120d000000Q914AAC';
+			c.Credentials__c = 'ABC' + count;
+			c.Employment_Status__c = 'Full-Time';
+			c.Title = 'Fake Title' + count;
+			c.hed__Preferred_Email__c = 'Alternate';
+			c.Career_Line__c = 'Adjunct';
+			con.Add(c);
+		}
+		insert con;
 
-        Contact c = new Contact();
-        c.LastName = 'Test';
-        c.hed__Primary_Organization__c = a.id;
-        c.RecordTypeId = '0120d000000Q914AAC';
-        c.Credentials__c = 'ABC';
-        c.Employment_Status__c = 'Full-Time';
-        c.Career_Line__c = 'Adjunct';
-        c.Title = 'Fake Title';
-        c.hed__AlternateEmail__c = 'noemail@noemail.com';
-        c.hed__Preferred_Email__c = 'Alternate';
-        insert c;
+		con = [SELECT Id, FirstName, LastName, Career_Line__c FROM Contact
+				   WHERE Career_Line__c = 'Adjunct'];
 
-        Contact c2 = new Contact();
-        c2.LastName = 'Sample';
-        c2.hed__Primary_Organization__c = a.id;
-        c2.RecordTypeId = '0120d000000Q914AAC';
-        c2.Credentials__c = 'DEF';
-        c2.Employment_Status__c = 'Retired';
-        c2.Career_Line__c = 'Clinical';
-        c2.Title = 'Fake Title';
-        c2.hed__AlternateEmail__c = 'sample@sample.com';
-        c2.hed__Preferred_Email__c = 'Alternate';
-        insert c2;
-    }
+		for (Contact c :con) {
+			Integer conCount = con.size();
+			System.assertEquals(10, conCount);
+
+        }
+
+		List<Contact> con2 = new List<Contact>();
+		for (Integer count = 0; count < 10; count ++) {
+			Contact c = new Contact();
+			String ln = count + 'Disney' + count;
+			c.LastName = ln;
+			String fn = count + 'Walt' + count;
+			c.FirstName = fn;
+			c.hed__AlternateEmail__c = ln + count + '@' + fn + count + '.com';
+			c.hed__Primary_Organization__c = a.id;
+			c.RecordTypeId = '0120d000000Q914AAC';
+			c.Credentials__c = 'ABC' + count;
+			c.Employment_Status__c = 'Retired';
+			c.Title = 'Fake Title' + count;
+			c.hed__Preferred_Email__c = 'Alternate';
+			c.Career_Line__c = 'Clinical';
+			con2.Add(c);
+		}
+		insert con2;
+
+		con2 = [SELECT Id, FirstName, LastName, Career_Line__c FROM Contact
+				   WHERE Career_Line__c = 'Clinical'];
+
+		for (Contact c :con2) {
+			Integer conCount = con2.size();
+			System.assertEquals(10, conCount);
+        }
+        Test.stopTest();
+	}
 }
