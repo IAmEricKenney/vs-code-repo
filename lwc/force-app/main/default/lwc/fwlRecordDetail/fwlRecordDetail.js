@@ -322,7 +322,7 @@ export default class FwlRecordDetail extends LightningElement {
   get December_Sim() {
     return this.fwl.data.fields.December_Sim__c.value;
   }
-  get February_Admin_Sum() {
+  get February_Admin() {
     return this.fwl.data.fields.February_Admin_Sum__c.value;
   }
   get February_Course_Dev() {
@@ -352,7 +352,7 @@ export default class FwlRecordDetail extends LightningElement {
   get February_Sim() {
     return this.fwl.data.fields.February_Sim__c.value;
   }
-  get January_Admin_Sum() {
+  get January_Admin() {
     return this.fwl.data.fields.January_Admin_Sum__c.value;
   }
   get January_Course_Dev() {
@@ -442,7 +442,7 @@ export default class FwlRecordDetail extends LightningElement {
   get June_Sim() {
     return this.fwl.data.fields.June_Sim__c.value;
   }
-  get March_Admin_Sum() {
+  get March_Admin() {
     return this.fwl.data.fields.March_Admin_Sum__c.value;
   }
   get March_Course_Dev() {
