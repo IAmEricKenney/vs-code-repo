@@ -27,7 +27,7 @@ const fields = [
   "Faculty_Workload__c.State_Funded_Scholarship__c",
   "Faculty_Workload__c.Service_Total__c",
   "Faculty_Workload__c.Simulation_total__c",
-  "Faculty_Workload__c.APRIL_ADMIN__C",
+  "Faculty_Workload__c.April_Admin__c",
   "Faculty_Workload__c.April_Admin__c",
   "Faculty_Workload__c.April_Course_Dev__c",
   "Faculty_Workload__c.April_Fellowship__c",
