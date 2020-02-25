@@ -18,15 +18,15 @@ const fields = [
   "Faculty_Workload__c.Other_Fall__c",
   "Faculty_Workload__c.Other_Spring__c",
   "Faculty_Workload__c.Other_Semester_Total_FTE__c",
-  "Faculty_Workload__c.Administration_Total__c",
-  "Faculty_Workload__c.Course_Development_Total__c",
-  "Faculty_Workload__c.Faculty_Fellowship_Total__c",
-  "Faculty_Workload__c.Grant_Funded_Effort_Total__c",
-  "Faculty_Workload__c.Practice_total__c",
-  "Faculty_Workload__c.Practice_Funded_Administration__c",
-  "Faculty_Workload__c.State_Funded_Scholarship__c",
-  "Faculty_Workload__c.Service_Total__c",
-  "Faculty_Workload__c.Simulation_total__c",
+  "Faculty_Workload__c.Admin_Total_FTE__c",
+  "Faculty_Workload__c.Course_Dev_Total_FTE__c",
+  "Faculty_Workload__c.Fellowship_Total_FTE__c",
+  "Faculty_Workload__c.Grant_Total_FTE__c",
+  "Faculty_Workload__c.Practice_Total_FTE__c",
+  "Faculty_Workload__c.Practice_Admin_Total_FTE__c",
+  "Faculty_Workload__c.Scholarship_Total_FTE__c",
+  "Faculty_Workload__c.Service_Total_FTE__c",
+  "Faculty_Workload__c.Sim_Total_FTE__c",
   "Faculty_Workload__c.Other_Monthly_Total_FTE__c",
   "Faculty_Workload__c.Admin_01_January__c",
   "Faculty_Workload__c.Admin_02_February__c",
@@ -206,31 +206,31 @@ export default class FwlRecordDetail extends LightningElement {
     return this.fwl.data.fields.Other_Semester_Total_FTE__c.value;
   }
   get Administration_Total() {
-    return this.fwl.data.fields.Administration_Total__c.value;
+    return this.fwl.data.fields.Admin_Total_FTE__c.value;
   }
   get Course_Development_Total() {
-    return this.fwl.data.fields.Course_Development_Total__c.value;
+    return this.fwl.data.fields.Course_Deve_Total_FTE__c.value;
   }
   get Faculty_Fellowship_Total() {
-    return this.fwl.data.fields.Faculty_Fellowship_Total__c.value;
+    return this.fwl.data.fields.Fellowship_Total_FTE__c.value;
   }
   get Grant_Funded_Effort_Total() {
-    return this.fwl.data.fields.Grant_Funded_Effort_Total__c.value;
+    return this.fwl.data.fields.Grant_Total_FTE__c.value;
   }
   get Practice_total() {
-    return this.fwl.data.fields.Practice_total__c.value;
+    return this.fwl.data.fields.Practice_Total_FTE__c.value;
   }
   get Practice_Funded_Administration() {
-    return this.fwl.data.fields.Practice_Funded_Administration__c.value;
+    return this.fwl.data.fields.Practice_Admin_Total_FTE__c.value;
   }
   get State_Funded_Scholarship() {
-    return this.fwl.data.fields.State_Funded_Scholarship__c.value;
+    return this.fwl.data.fields.Scholarship_Total_FTE__c.value;
   }
   get Service_Total() {
     return this.fwl.data.fields.Service_Total__c.value;
   }
   get Simulation_total() {
-    return this.fwl.data.fields.Simulation_total__c.value;
+    return this.fwl.data.fields.Sim_Total_FTE__c.value;
   }
   get Other_Monthly_Total_FTE() {
     return this.fwl.data.fields.Other_Monthly_Total_FTE__c.value;
