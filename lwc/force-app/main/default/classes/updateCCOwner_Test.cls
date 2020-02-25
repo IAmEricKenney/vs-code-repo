@@ -1,8 +1,8 @@
 @IsTest
-public class updateCCOwner_Test {
+public with sharing class updateCCOwner_Test {
     @IsTest
     static void updateCCOwner_Test() {
-
+        
 
     }
 }
