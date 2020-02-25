@@ -2,32 +2,6 @@ import { LightningElement, api, wire } from "lwc";
 import { getRecord } from "lightning/uiRecordApi";
 
 const fields = [
-  "Faculty_Workload__c.Teaching_Summer__c",
-  "Faculty_Workload__c.Teaching_Fall__c",
-  "Faculty_Workload__c.Teaching_Spring__c",
-  "Faculty_Workload__c.Teaching_Total_FTE__c",
-  "Faculty_Workload__c.Dissertation_Chair_Summer__c",
-  "Faculty_Workload__c.Dissertation_Chair_Fall__c",
-  "Faculty_Workload__c.Dissertation_Chair_Spring__c",
-  "Faculty_Workload__c.Dissertation_Chair_Total_FTE__c",
-  "Faculty_Workload__c.Thesis_Chair_Summer__c",
-  "Faculty_Workload__c.Thesis_Chair_Fall__c",
-  "Faculty_Workload__c.Thesis_Chair_Spring__c",
-  "Faculty_Workload__c.Thesis_Chair_Total_FTE__c",
-  "Faculty_Workload__c.Other_Summer__c",
-  "Faculty_Workload__c.Other_Fall__c",
-  "Faculty_Workload__c.Other_Spring__c",
-  "Faculty_Workload__c.Other_Semester_Total_FTE__c",
-  "Faculty_Workload__c.Admin_Total_FTE__c",
-  "Faculty_Workload__c.Course_Dev_Total_FTE__c",
-  "Faculty_Workload__c.Fellowship_Total_FTE__c",
-  "Faculty_Workload__c.Grant_Total_FTE__c",
-  "Faculty_Workload__c.Practice_Total_FTE__c",
-  "Faculty_Workload__c.Practice_Admin_Total_FTE__c",
-  "Faculty_Workload__c.Scholarship_Total_FTE__c",
-  "Faculty_Workload__c.Service_Total_FTE__c",
-  "Faculty_Workload__c.Sim_Total_FTE__c",
-  "Faculty_Workload__c.Other_Monthly_Total_FTE__c",
   "Faculty_Workload__c.Admin_01_January__c",
   "Faculty_Workload__c.Admin_02_February__c",
   "Faculty_Workload__c.Admin_03_March__c",
@@ -40,6 +14,7 @@ const fields = [
   "Faculty_Workload__c.Admin_10_October__c",
   "Faculty_Workload__c.Admin_11_November__c",
   "Faculty_Workload__c.Admin_12_December__c",
+  "Faculty_Workload__c.Admin_Total_FTE__c",
   "Faculty_Workload__c.Course_Dev_01_January__c",
   "Faculty_Workload__c.Course_Dev_02_February__c",
   "Faculty_Workload__c.Course_Dev_03_March__c",
@@ -52,6 +27,11 @@ const fields = [
   "Faculty_Workload__c.Course_Dev_10_October__c",
   "Faculty_Workload__c.Course_Dev_11_November__c",
   "Faculty_Workload__c.Course_Dev_12_December__c",
+  "Faculty_Workload__c.Course_Dev_Total_FTE__c",
+  "Faculty_Workload__c.Dissertation_Chair_Fall__c",
+  "Faculty_Workload__c.Dissertation_Chair_Spring__c",
+  "Faculty_Workload__c.Dissertation_Chair_Summer__c",
+  "Faculty_Workload__c.Dissertation_Chair_Total_FTE__c",
   "Faculty_Workload__c.Fellowship_01_January__c",
   "Faculty_Workload__c.Fellowship_02_February__c",
   "Faculty_Workload__c.Fellowship_03_March__c",
@@ -64,7 +44,7 @@ const fields = [
   "Faculty_Workload__c.Fellowship_10_October__c",
   "Faculty_Workload__c.Fellowship_11_November__c",
   "Faculty_Workload__c.Fellowship_12_December__c",
-  "Faculty_Workload__c.Fellowship_Count__c",
+  "Faculty_Workload__c.Fellowship_Total_FTE__c",
   "Faculty_Workload__c.Grant_01_January__c",
   "Faculty_Workload__c.Grant_02_February__c",
   "Faculty_Workload__c.Grant_03_March__c",
@@ -77,6 +57,7 @@ const fields = [
   "Faculty_Workload__c.Grant_10_October__c",
   "Faculty_Workload__c.Grant_11_November__c",
   "Faculty_Workload__c.Grant_12_December__c",
+  "Faculty_Workload__c.Grant_Total_FTE__c",
   "Faculty_Workload__c.Other_01_January__c",
   "Faculty_Workload__c.Other_02_February__c",
   "Faculty_Workload__c.Other_03_March__c",
@@ -89,6 +70,11 @@ const fields = [
   "Faculty_Workload__c.Other_10_October__c",
   "Faculty_Workload__c.Other_11_November__c",
   "Faculty_Workload__c.Other_12_December__c",
+  "Faculty_Workload__c.Other_Fall__c",
+  "Faculty_Workload__c.Other_Monthly_Total_FTE__c",
+  "Faculty_Workload__c.Other_Semester_Total_FTE__c",
+  "Faculty_Workload__c.Other_Spring__c",
+  "Faculty_Workload__c.Other_Summer__c",
   "Faculty_Workload__c.Practice_01_January__c",
   "Faculty_Workload__c.Practice_02_February__c",
   "Faculty_Workload__c.Practice_03_March__c",
@@ -113,6 +99,8 @@ const fields = [
   "Faculty_Workload__c.Practice_Admin_10_October__c",
   "Faculty_Workload__c.Practice_Admin_11_November__c",
   "Faculty_Workload__c.Practice_Admin_12_December__c",
+  "Faculty_Workload__c.Practice_Admin_Total_FTE__c",
+  "Faculty_Workload__c.Practice_Total_FTE__c",
   "Faculty_Workload__c.Scholarship_01_January__c",
   "Faculty_Workload__c.Scholarship_02_February__c",
   "Faculty_Workload__c.Scholarship_03_March__c",
@@ -125,6 +113,7 @@ const fields = [
   "Faculty_Workload__c.Scholarship_10_October__c",
   "Faculty_Workload__c.Scholarship_11_November__c",
   "Faculty_Workload__c.Scholarship_12_December__c",
+  "Faculty_Workload__c.Scholarship_Total_FTE__c",
   "Faculty_Workload__c.Service_01_January__c",
   "Faculty_Workload__c.Service_02_February__c",
   "Faculty_Workload__c.Service_03_March__c",
@@ -137,6 +126,7 @@ const fields = [
   "Faculty_Workload__c.Service_10_October__c",
   "Faculty_Workload__c.Service_11_November__c",
   "Faculty_Workload__c.Service_12_December__c",
+  "Faculty_Workload__c.Service_Total_FTE__c",
   "Faculty_Workload__c.Sim_01_January__c",
   "Faculty_Workload__c.Sim_02_February__c",
   "Faculty_Workload__c.Sim_03_March__c",
@@ -148,7 +138,16 @@ const fields = [
   "Faculty_Workload__c.Sim_09_September__c",
   "Faculty_Workload__c.Sim_10_October__c",
   "Faculty_Workload__c.Sim_11_November__c",
-  "Faculty_Workload__c.Sim_12_December__c"
+  "Faculty_Workload__c.Sim_12_December__c",
+  "Faculty_Workload__c.Sim_Total_FTE__c",
+  "Faculty_Workload__c.Teaching_Fall__c",
+  "Faculty_Workload__c.Teaching_Spring__c",
+  "Faculty_Workload__c.Teaching_Summer__c",
+  "Faculty_Workload__c.Teaching_Total_FTE__c",
+  "Faculty_Workload__c.Thesis_Chair_Fall__c",
+  "Faculty_Workload__c.Thesis_Chair_Spring__c",
+  "Faculty_Workload__c.Thesis_Chair_Summer__c",
+  "Faculty_Workload__c.Thesis_Chair_Total_FTE__c"
 ];
 
 export default class FwlRecordDetail extends LightningElement {
@@ -157,84 +156,6 @@ export default class FwlRecordDetail extends LightningElement {
   @wire(getRecord, { recordId: "$recordId", fields })
   fwl;
 
-  get Teaching_Summer() {
-    return this.fwl.data.fields.Teaching_Summer__c.value;
-  }
-  get Teaching_Fall() {
-    return this.fwl.data.fields.Teaching_Fall__c.value;
-  }
-  get Teaching_Spring() {
-    return this.fwl.data.fields.Teaching_Spring__c.value;
-  }
-  get Teaching_Total_FTE() {
-    return this.fwl.data.fields.Teaching_Total_FTE__c.value;
-  }
-  get Dissertation_Chair_Summer() {
-    return this.fwl.data.fields.Dissertation_Chair_Summer__c.value;
-  }
-  get Dissertation_Chair_Fall() {
-    return this.fwl.data.fields.Dissertation_Chair_Fall__c.value;
-  }
-  get Dissertation_Chair_Spring() {
-    return this.fwl.data.fields.Dissertation_Chair_Spring__c.value;
-  }
-  get Dissertation_Chair_Total_FTE() {
-    return this.fwl.data.fields.Dissertation_Chair_Total_FTE__c.value;
-  }
-  get Thesis_Chair_Summer() {
-    return this.fwl.data.fields.Thesis_Chair_Summer__c.value;
-  }
-  get Thesis_Chair_Fall() {
-    return this.fwl.data.fields.Thesis_Chair_Fall__c.value;
-  }
-  get Thesis_Chair_Spring() {
-    return this.fwl.data.fields.Thesis_Chair_Spring__c.value;
-  }
-  get Thesis_Chair_Total_FTE() {
-    return this.fwl.data.fields.Thesis_Chair_Total_FTE__c.value;
-  }
-  get Other_Summer() {
-    return this.fwl.data.fields.Other_Summer__c.value;
-  }
-  get Other_Fall() {
-    return this.fwl.data.fields.Other_Fall__c.value;
-  }
-  get Other_Spring() {
-    return this.fwl.data.fields.Other_Spring__c.value;
-  }
-  get Other_Semester_Total_FTE() {
-    return this.fwl.data.fields.Other_Semester_Total_FTE__c.value;
-  }
-  get Administration_Total() {
-    return this.fwl.data.fields.Admin_Total_FTE__c.value;
-  }
-  get Course_Development_Total() {
-    return this.fwl.data.fields.Course_Deve_Total_FTE__c.value;
-  }
-  get Faculty_Fellowship_Total() {
-    return this.fwl.data.fields.Fellowship_Total_FTE__c.value;
-  }
-  get Grant_Funded_Effort_Total() {
-    return this.fwl.data.fields.Grant_Total_FTE__c.value;
-  }
-  get Practice_total() {
-    return this.fwl.data.fields.Practice_Total_FTE__c.value;
-  }
-  get Practice_Funded_Administration() {
-    return this.fwl.data.fields.Practice_Admin_Total_FTE__c.value;
-  }
-  get State_Funded_Scholarship() {
-    return this.fwl.data.fields.Scholarship_Total_FTE__c.value;
-  }
-  get Service_Total() {
-    return this.fwl.data.fields.Service_Total__c.value;
-  }
-  get Simulation_total() {
-    return this.fwl.data.fields.Sim_Total_FTE__c.value;
-  }
-  get Other_Monthly_Total_FTE() {
-    return this.fwl.data.fields.Other_Monthly_Total_FTE__c.value;
-  }
   get Admin_01_January() {
     return this.fwl.data.fields.Admin_01_January__c.value;
   }
@@ -270,6 +191,9 @@ export default class FwlRecordDetail extends LightningElement {
   }
   get Admin_12_December() {
     return this.fwl.data.fields.Admin_12_December__c.value;
+  }
+  get Admin_Total_FTE() {
+    return this.fwl.data.fields.Admin_Total_FTE__c.value;
   }
   get Course_Dev_01_January() {
     return this.fwl.data.fields.Course_Dev_01_January__c.value;
@@ -307,6 +231,21 @@ export default class FwlRecordDetail extends LightningElement {
   get Course_Dev_12_December() {
     return this.fwl.data.fields.Course_Dev_12_December__c.value;
   }
+  get Course_Dev_Total_FTE() {
+    return this.fwl.data.fields.Course_Dev_Total_FTE__c.value;
+  }
+  get Dissertation_Chair_Fall() {
+    return this.fwl.data.fields.Dissertation_Chair_Fall__c.value;
+  }
+  get Dissertation_Chair_Spring() {
+    return this.fwl.data.fields.Dissertation_Chair_Spring__c.value;
+  }
+  get Dissertation_Chair_Summer() {
+    return this.fwl.data.fields.Dissertation_Chair_Summer__c.value;
+  }
+  get Dissertation_Chair_Total_FTE() {
+    return this.fwl.data.fields.Dissertation_Chair_Total_FTE__c.value;
+  }
   get Fellowship_01_January() {
     return this.fwl.data.fields.Fellowship_01_January__c.value;
   }
@@ -343,8 +282,8 @@ export default class FwlRecordDetail extends LightningElement {
   get Fellowship_12_December() {
     return this.fwl.data.fields.Fellowship_12_December__c.value;
   }
-  get Fellowship_Count() {
-    return this.fwl.data.fields.Fellowship_Count__c.value;
+  get Fellowship_Total_FTE() {
+    return this.fwl.data.fields.Fellowship_Total_FTE__c.value;
   }
   get Grant_01_January() {
     return this.fwl.data.fields.Grant_01_January__c.value;
@@ -382,6 +321,9 @@ export default class FwlRecordDetail extends LightningElement {
   get Grant_12_December() {
     return this.fwl.data.fields.Grant_12_December__c.value;
   }
+  get Grant_Total_FTE() {
+    return this.fwl.data.fields.Grant_Total_FTE__c.value;
+  }
   get Other_01_January() {
     return this.fwl.data.fields.Other_01_January__c.value;
   }
@@ -417,6 +359,21 @@ export default class FwlRecordDetail extends LightningElement {
   }
   get Other_12_December() {
     return this.fwl.data.fields.Other_12_December__c.value;
+  }
+  get Other_Fall() {
+    return this.fwl.data.fields.Other_Fall__c.value;
+  }
+  get Other_Monthly_Total_FTE() {
+    return this.fwl.data.fields.Other_Monthly_Total_FTE__c.value;
+  }
+  get Other_Semester_Total_FTE() {
+    return this.fwl.data.fields.Other_Semester_Total_FTE__c.value;
+  }
+  get Other_Spring() {
+    return this.fwl.data.fields.Other_Spring__c.value;
+  }
+  get Other_Summer() {
+    return this.fwl.data.fields.Other_Summer__c.value;
   }
   get Practice_01_January() {
     return this.fwl.data.fields.Practice_01_January__c.value;
@@ -490,6 +447,12 @@ export default class FwlRecordDetail extends LightningElement {
   get Practice_Admin_12_December() {
     return this.fwl.data.fields.Practice_Admin_12_December__c.value;
   }
+  get Practice_Admin_Total_FTE() {
+    return this.fwl.data.fields.Practice_Admin_Total_FTE__c.value;
+  }
+  get Practice_Total_FTE() {
+    return this.fwl.data.fields.Practice_Total_FTE__c.value;
+  }
   get Scholarship_01_January() {
     return this.fwl.data.fields.Scholarship_01_January__c.value;
   }
@@ -525,6 +488,9 @@ export default class FwlRecordDetail extends LightningElement {
   }
   get Scholarship_12_December() {
     return this.fwl.data.fields.Scholarship_12_December__c.value;
+  }
+  get Scholarship_Total_FTE() {
+    return this.fwl.data.fields.Scholarship_Total_FTE__c.value;
   }
   get Service_01_January() {
     return this.fwl.data.fields.Service_01_January__c.value;
@@ -562,6 +528,9 @@ export default class FwlRecordDetail extends LightningElement {
   get Service_12_December() {
     return this.fwl.data.fields.Service_12_December__c.value;
   }
+  get Service_Total_FTE() {
+    return this.fwl.data.fields.Service_Total_FTE__c.value;
+  }
   get Sim_01_January() {
     return this.fwl.data.fields.Sim_01_January__c.value;
   }
@@ -597,5 +566,32 @@ export default class FwlRecordDetail extends LightningElement {
   }
   get Sim_12_December() {
     return this.fwl.data.fields.Sim_12_December__c.value;
+  }
+  get Sim_Total_FTE() {
+    return this.fwl.data.fields.Sim_Total_FTE__c.value;
+  }
+  get Teaching_Fall() {
+    return this.fwl.data.fields.Teaching_Fall__c.value;
+  }
+  get Teaching_Spring() {
+    return this.fwl.data.fields.Teaching_Spring__c.value;
+  }
+  get Teaching_Summer() {
+    return this.fwl.data.fields.Teaching_Summer__c.value;
+  }
+  get Teaching_Total_FTE() {
+    return this.fwl.data.fields.Teaching_Total_FTE__c.value;
+  }
+  get Thesis_Chair_Fall() {
+    return this.fwl.data.fields.Thesis_Chair_Fall__c.value;
+  }
+  get Thesis_Chair_Spring() {
+    return this.fwl.data.fields.Thesis_Chair_Spring__c.value;
+  }
+  get Thesis_Chair_Summer() {
+    return this.fwl.data.fields.Thesis_Chair_Summer__c.value;
+  }
+  get Thesis_Chair_Total_FTE() {
+    return this.fwl.data.fields.Thesis_Chair_Total_FTE__c.value;
   }
 }
