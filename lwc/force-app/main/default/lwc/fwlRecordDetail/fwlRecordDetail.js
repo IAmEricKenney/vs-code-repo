@@ -27,128 +27,128 @@ const fields = [
   "Faculty_Workload__c.State_Funded_Scholarship__c",
   "Faculty_Workload__c.Service_Total__c",
   "Faculty_Workload__c.Simulation_total__c",
-  "Faculty_Workload__c.April_Admin__c",
-  "Faculty_Workload__c.April_Admin__c",
-  "Faculty_Workload__c.April_Course_Dev__c",
-  "Faculty_Workload__c.April_Fellowship__c",
-  "Faculty_Workload__c.April_Grant__c",
-  "Faculty_Workload__c.April_Other__c",
-  "Faculty_Workload__c.April_Practice_Admin__c",
-  "Faculty_Workload__c.April_Practice__c",
-  "Faculty_Workload__c.April_Scholarship__c",
-  "Faculty_Workload__c.April_Service__c",
-  "Faculty_Workload__c.April_Sim__c",
-  "Faculty_Workload__c.August_Admin__c",
-  "Faculty_Workload__c.August_Course_Dev__c",
-  "Faculty_Workload__c.August_Fellowship__c",
-  "Faculty_Workload__c.August_Grant__c",
-  "Faculty_Workload__c.August_Other__c",
-  "Faculty_Workload__c.August_Practice_Admin__c",
-  "Faculty_Workload__c.August_Practice__c",
-  "Faculty_Workload__c.August_Scholarship__c",
-  "Faculty_Workload__c.August_Service__c",
-  "Faculty_Workload__c.August_Sim__c",
-  "Faculty_Workload__c.December_Admin__c",
-  "Faculty_Workload__c.December_Course_Dev__c",
-  "Faculty_Workload__c.December_Fellowship__c",
-  "Faculty_Workload__c.December_Grant__c",
-  "Faculty_Workload__c.December_Other__c",
-  "Faculty_Workload__c.December_Practice_Admin__c",
-  "Faculty_Workload__c.December_Practice__c",
-  "Faculty_Workload__c.December_Scholarship__c",
-  "Faculty_Workload__c.December_Service__c",
-  "Faculty_Workload__c.December_Sim__c",
-  "Faculty_Workload__c.February_Admin_Sum__c",
-  "Faculty_Workload__c.February_Course_Dev__c",
-  "Faculty_Workload__c.February_Fellowship__c",
-  "Faculty_Workload__c.February_Grant__c",
-  "Faculty_Workload__c.February_Other__c",
-  "Faculty_Workload__c.February_Practice_Admin__c",
-  "Faculty_Workload__c.February_Practice__c",
-  "Faculty_Workload__c.February_Scholarship__c",
-  "Faculty_Workload__c.February_Service__c",
-  "Faculty_Workload__c.February_Sim__c",
-  "Faculty_Workload__c.January_Admin_Sum__c",
-  "Faculty_Workload__c.January_Course_Dev__c",
-  "Faculty_Workload__c.January_Fellowship__c",
-  "Faculty_Workload__c.January_Grant__c",
-  "Faculty_Workload__c.January_Other__c",
-  "Faculty_Workload__c.January_Practice_Admin__c",
-  "Faculty_Workload__c.January_Practice__c",
-  "Faculty_Workload__c.January_Scholarship__c",
-  "Faculty_Workload__c.January_Service__c",
-  "Faculty_Workload__c.January_Sim__c",
-  "Faculty_Workload__c.July_Admin__c",
-  "Faculty_Workload__c.July_Course_Dev__c",
-  "Faculty_Workload__c.July_Fellowship__c",
-  "Faculty_Workload__c.July_Grant__c",
-  "Faculty_Workload__c.July_Other__c",
-  "Faculty_Workload__c.July_Practice_Admin__c",
-  "Faculty_Workload__c.July_Practice__c",
-  "Faculty_Workload__c.July_Scholarship__c",
-  "Faculty_Workload__c.July_Service__c",
-  "Faculty_Workload__c.July_Sim__c",
-  "Faculty_Workload__c.June_Admin__c",
-  "Faculty_Workload__c.June_Course_Dev__c",
-  "Faculty_Workload__c.June_Fellowship__c",
-  "Faculty_Workload__c.June_Grant__c",
-  "Faculty_Workload__c.June_Other__c",
-  "Faculty_Workload__c.June_Practice_Admin__c",
-  "Faculty_Workload__c.June_Practice__c",
-  "Faculty_Workload__c.June_Scholarship__c",
-  "Faculty_Workload__c.June_Service__c",
-  "Faculty_Workload__c.June_Sim__c",
-  "Faculty_Workload__c.March_Admin_Sum__c",
-  "Faculty_Workload__c.March_Course_Dev__c",
-  "Faculty_Workload__c.March_Fellowship__c",
-  "Faculty_Workload__c.March_Grant__c",
-  "Faculty_Workload__c.March_Other__c",
-  "Faculty_Workload__c.March_Practice_Admin__c",
-  "Faculty_Workload__c.March_Practice__c",
-  "Faculty_Workload__c.March_Scholarship__c",
-  "Faculty_Workload__c.March_Service__c",
-  "Faculty_Workload__c.March_Sim__c",
-  "Faculty_Workload__c.May_Admin__c",
-  "Faculty_Workload__c.May_Course_Dev__c",
-  "Faculty_Workload__c.May_Fellowship__c",
-  "Faculty_Workload__c.May_Grant__c",
-  "Faculty_Workload__c.May_Other__c",
-  "Faculty_Workload__c.May_Practice_Admin__c",
-  "Faculty_Workload__c.May_Practice__c",
-  "Faculty_Workload__c.May_Scholarship__c",
-  "Faculty_Workload__c.May_Service__c",
-  "Faculty_Workload__c.May_Sim__c",
-  "Faculty_Workload__c.November_Admin__c",
-  "Faculty_Workload__c.November_Course_Dev__c",
-  "Faculty_Workload__c.November_Fellowship__c",
-  "Faculty_Workload__c.November_Grant__c",
-  "Faculty_Workload__c.November_Other__c",
-  "Faculty_Workload__c.November_Practice_Admin__c",
-  "Faculty_Workload__c.November_Practice__c",
-  "Faculty_Workload__c.November_Scholarship__c",
-  "Faculty_Workload__c.November_Service__c",
-  "Faculty_Workload__c.November_Sim__c",
-  "Faculty_Workload__c.October_Admin__c",
-  "Faculty_Workload__c.October_Course_Dev__c",
-  "Faculty_Workload__c.October_Fellowship__c",
-  "Faculty_Workload__c.October_Grant__c",
-  "Faculty_Workload__c.October_Other__c",
-  "Faculty_Workload__c.October_Practice_Admin__c",
-  "Faculty_Workload__c.October_Practice__c",
-  "Faculty_Workload__c.October_Scholarship__c",
-  "Faculty_Workload__c.October_Service__c",
-  "Faculty_Workload__c.October_Sim__c",
   "Faculty_Workload__c.Other_Monthly_Total_FTE__c",
-  "Faculty_Workload__c.September_Admin__c",
-  "Faculty_Workload__c.September_Course_Dev__c",
-  "Faculty_Workload__c.September_Fellowship__c",
-  "Faculty_Workload__c.September_Grant__c",
-  "Faculty_Workload__c.September_Other__c",
-  "Faculty_Workload__c.September_Practice_Admin__c",
-  "Faculty_Workload__c.September_Practice__c",
-  "Faculty_Workload__c.September_Scholarship__c",
-  "Faculty_Workload__c.September_Service__c",
-  "Faculty_Workload__c.September_Sim__c"
+  "Faculty_Workload__c.Admin_01_January__c",
+  "Faculty_Workload__c.Admin_02_February__c",
+  "Faculty_Workload__c.Admin_03_March__c",
+  "Faculty_Workload__c.Admin_04_April__c",
+  "Faculty_Workload__c.Admin_05_May__c",
+  "Faculty_Workload__c.Admin_06_June__c",
+  "Faculty_Workload__c.Admin_07_July__c",
+  "Faculty_Workload__c.Admin_08_August__c",
+  "Faculty_Workload__c.Admin_09_September__c",
+  "Faculty_Workload__c.Admin_10_October__c",
+  "Faculty_Workload__c.Admin_11_November__c",
+  "Faculty_Workload__c.Admin_12_December__c",
+  "Faculty_Workload__c.Course_Dev_01_January__c",
+  "Faculty_Workload__c.Course_Dev_02_February__c",
+  "Faculty_Workload__c.Course_Dev_03_March__c",
+  "Faculty_Workload__c.Course_Dev_04_April__c",
+  "Faculty_Workload__c.Course_Dev_05_May__c",
+  "Faculty_Workload__c.Course_Dev_06_June__c",
+  "Faculty_Workload__c.Course_Dev_07_July__c",
+  "Faculty_Workload__c.Course_Dev_08_August__c",
+  "Faculty_Workload__c.Course_Dev_09_September__c",
+  "Faculty_Workload__c.Course_Dev_10_October__c",
+  "Faculty_Workload__c.Course_Dev_11_November__c",
+  "Faculty_Workload__c.Course_Dev_12_December__c",
+  "Faculty_Workload__c.Fellowship_01_January__c",
+  "Faculty_Workload__c.Fellowship_02_February__c",
+  "Faculty_Workload__c.Fellowship_03_March__c",
+  "Faculty_Workload__c.Fellowship_04_April__c",
+  "Faculty_Workload__c.Fellowship_05_May__c",
+  "Faculty_Workload__c.Fellowship_06_June__c",
+  "Faculty_Workload__c.Fellowship_07_July__c",
+  "Faculty_Workload__c.Fellowship_08_August__c",
+  "Faculty_Workload__c.Fellowship_09_September__c",
+  "Faculty_Workload__c.Fellowship_10_October__c",
+  "Faculty_Workload__c.Fellowship_11_November__c",
+  "Faculty_Workload__c.Fellowship_12_December__c",
+  "Faculty_Workload__c.Fellowship_Count__c",
+  "Faculty_Workload__c.Grant_01_January__c",
+  "Faculty_Workload__c.Grant_02_February__c",
+  "Faculty_Workload__c.Grant_03_March__c",
+  "Faculty_Workload__c.Grant_04_April__c",
+  "Faculty_Workload__c.Grant_05_May__c",
+  "Faculty_Workload__c.Grant_06_June__c",
+  "Faculty_Workload__c.Grant_07_July__c",
+  "Faculty_Workload__c.Grant_08_August__c",
+  "Faculty_Workload__c.Grant_09_September__c",
+  "Faculty_Workload__c.Grant_10_October__c",
+  "Faculty_Workload__c.Grant_11_November__c",
+  "Faculty_Workload__c.Grant_12_December__c",
+  "Faculty_Workload__c.Other_01_January__c",
+  "Faculty_Workload__c.Other_02_February__c",
+  "Faculty_Workload__c.Other_03_March__c",
+  "Faculty_Workload__c.Other_04_April__c",
+  "Faculty_Workload__c.Other_05_May__c",
+  "Faculty_Workload__c.Other_06_June__c",
+  "Faculty_Workload__c.Other_07_July__c",
+  "Faculty_Workload__c.Other_08_August__c",
+  "Faculty_Workload__c.Other_09_September__c",
+  "Faculty_Workload__c.Other_10_October__c",
+  "Faculty_Workload__c.Other_11_November__c",
+  "Faculty_Workload__c.Other_12_December__c",
+  "Faculty_Workload__c.Practice_01_January__c",
+  "Faculty_Workload__c.Practice_02_February__c",
+  "Faculty_Workload__c.Practice_03_March__c",
+  "Faculty_Workload__c.Practice_04_April__c",
+  "Faculty_Workload__c.Practice_05_May__c",
+  "Faculty_Workload__c.Practice_06_June__c",
+  "Faculty_Workload__c.Practice_07_July__c",
+  "Faculty_Workload__c.Practice_08_August__c",
+  "Faculty_Workload__c.Practice_09_September__c",
+  "Faculty_Workload__c.Practice_10_October__c",
+  "Faculty_Workload__c.Practice_11_November__c",
+  "Faculty_Workload__c.Practice_12_December__c",
+  "Faculty_Workload__c.Practice_Admin_01_January__c",
+  "Faculty_Workload__c.Practice_Admin_02_February__c",
+  "Faculty_Workload__c.Practice_Admin_03_March__c",
+  "Faculty_Workload__c.Practice_Admin_04_April__c",
+  "Faculty_Workload__c.Practice_Admin_05_May__c",
+  "Faculty_Workload__c.Practice_Admin_06_June__c",
+  "Faculty_Workload__c.Practice_Admin_07_July__c",
+  "Faculty_Workload__c.Practice_Admin_08_August__c",
+  "Faculty_Workload__c.Practice_Admin_09_September__c",
+  "Faculty_Workload__c.Practice_Admin_10_October__c",
+  "Faculty_Workload__c.Practice_Admin_11_November__c",
+  "Faculty_Workload__c.Practice_Admin_12_December__c",
+  "Faculty_Workload__c.Scholarship_01_January__c",
+  "Faculty_Workload__c.Scholarship_02_February__c",
+  "Faculty_Workload__c.Scholarship_03_March__c",
+  "Faculty_Workload__c.Scholarship_04_April__c",
+  "Faculty_Workload__c.Scholarship_05_May__c",
+  "Faculty_Workload__c.Scholarship_06_June__c",
+  "Faculty_Workload__c.Scholarship_07_July__c",
+  "Faculty_Workload__c.Scholarship_08_August__c",
+  "Faculty_Workload__c.Scholarship_09_September__c",
+  "Faculty_Workload__c.Scholarship_10_October__c",
+  "Faculty_Workload__c.Scholarship_11_November__c",
+  "Faculty_Workload__c.Scholarship_12_December__c",
+  "Faculty_Workload__c.Service_01_January__c",
+  "Faculty_Workload__c.Service_02_February__c",
+  "Faculty_Workload__c.Service_03_March__c",
+  "Faculty_Workload__c.Service_04_April__c",
+  "Faculty_Workload__c.Service_05_May__c",
+  "Faculty_Workload__c.Service_06_June__c",
+  "Faculty_Workload__c.Service_07_July__c",
+  "Faculty_Workload__c.Service_08_August__c",
+  "Faculty_Workload__c.Service_09_September__c",
+  "Faculty_Workload__c.Service_10_October__c",
+  "Faculty_Workload__c.Service_11_November__c",
+  "Faculty_Workload__c.Service_12_December__c",
+  "Faculty_Workload__c.Sim_01_January__c",
+  "Faculty_Workload__c.Sim_02_February__c",
+  "Faculty_Workload__c.Sim_03_March__c",
+  "Faculty_Workload__c.Sim_04_April__c",
+  "Faculty_Workload__c.Sim_05_May__c",
+  "Faculty_Workload__c.Sim_06_June__c",
+  "Faculty_Workload__c.Sim_07_July__c",
+  "Faculty_Workload__c.Sim_08_August__c",
+  "Faculty_Workload__c.Sim_09_September__c",
+  "Faculty_Workload__c.Sim_10_October__c",
+  "Faculty_Workload__c.Sim_11_November__c",
+  "Faculty_Workload__c.Sim_12_December__c"
 ];
 
 export default class FwlRecordDetail extends LightningElement {
@@ -232,367 +232,370 @@ export default class FwlRecordDetail extends LightningElement {
   get Simulation_total() {
     return this.fwl.data.fields.Simulation_total__c.value;
   }
-  get April_Admin() {
-    return this.fwl.data.fields.April_Admin__c.value;
-  }
-  get April_Course_Dev() {
-    return this.fwl.data.fields.April_Course_Dev__c.value;
-  }
-  get April_Fellowship() {
-    return this.fwl.data.fields.April_Fellowship__c.value;
-  }
-  get April_Grant() {
-    return this.fwl.data.fields.April_Grant__c.value;
-  }
-  get April_Other() {
-    return this.fwl.data.fields.April_Other__c.value;
-  }
-  get April_Practice_Admin() {
-    return this.fwl.data.fields.April_Practice_Admin__c.value;
-  }
-  get April_Practice() {
-    return this.fwl.data.fields.April_Practice__c.value;
-  }
-  get April_Scholarship() {
-    return this.fwl.data.fields.April_Scholarship__c.value;
-  }
-  get April_Service() {
-    return this.fwl.data.fields.April_Service__c.value;
-  }
-  get April_Sim() {
-    return this.fwl.data.fields.April_Sim__c.value;
-  }
-  get August_Admin() {
-    return this.fwl.data.fields.August_Admin__c.value;
-  }
-  get August_Course_Dev() {
-    return this.fwl.data.fields.August_Course_Dev__c.value;
-  }
-  get August_Fellowship() {
-    return this.fwl.data.fields.August_Fellowship__c.value;
-  }
-  get August_Grant() {
-    return this.fwl.data.fields.August_Grant__c.value;
-  }
-  get August_Other() {
-    return this.fwl.data.fields.August_Other__c.value;
-  }
-  get August_Practice_Admin() {
-    return this.fwl.data.fields.August_Practice_Admin__c.value;
-  }
-  get August_Practice() {
-    return this.fwl.data.fields.August_Practice__c.value;
-  }
-  get August_Scholarship() {
-    return this.fwl.data.fields.August_Scholarship__c.value;
-  }
-  get August_Service() {
-    return this.fwl.data.fields.August_Service__c.value;
-  }
-  get August_Sim() {
-    return this.fwl.data.fields.August_Sim__c.value;
-  }
-  get December_Admin() {
-    return this.fwl.data.fields.December_Admin__c.value;
-  }
-  get December_Course_Dev() {
-    return this.fwl.data.fields.December_Course_Dev__c.value;
-  }
-  get December_Fellowship() {
-    return this.fwl.data.fields.December_Fellowship__c.value;
-  }
-  get December_Grant() {
-    return this.fwl.data.fields.December_Grant__c.value;
-  }
-  get December_Other() {
-    return this.fwl.data.fields.December_Other__c.value;
-  }
-  get December_Practice_Admin() {
-    return this.fwl.data.fields.December_Practice_Admin__c.value;
-  }
-  get December_Practice() {
-    return this.fwl.data.fields.December_Practice__c.value;
-  }
-  get December_Scholarship() {
-    return this.fwl.data.fields.December_Scholarship__c.value;
-  }
-  get December_Service() {
-    return this.fwl.data.fields.December_Service__c.value;
-  }
-  get December_Sim() {
-    return this.fwl.data.fields.December_Sim__c.value;
-  }
-  get February_Admin() {
-    return this.fwl.data.fields.February_Admin_Sum__c.value;
-  }
-  get February_Course_Dev() {
-    return this.fwl.data.fields.February_Course_Dev__c.value;
-  }
-  get February_Fellowship() {
-    return this.fwl.data.fields.February_Fellowship__c.value;
-  }
-  get February_Grant() {
-    return this.fwl.data.fields.February_Grant__c.value;
-  }
-  get February_Other() {
-    return this.fwl.data.fields.February_Other__c.value;
-  }
-  get February_Practice_Admin() {
-    return this.fwl.data.fields.February_Practice_Admin__c.value;
-  }
-  get February_Practice() {
-    return this.fwl.data.fields.February_Practice__c.value;
-  }
-  get February_Scholarship() {
-    return this.fwl.data.fields.February_Scholarship__c.value;
-  }
-  get February_Service() {
-    return this.fwl.data.fields.February_Service__c.value;
-  }
-  get February_Sim() {
-    return this.fwl.data.fields.February_Sim__c.value;
-  }
-  get January_Admin() {
-    return this.fwl.data.fields.January_Admin_Sum__c.value;
-  }
-  get January_Course_Dev() {
-    return this.fwl.data.fields.January_Course_Dev__c.value;
-  }
-  get January_Fellowship() {
-    return this.fwl.data.fields.January_Fellowship__c.value;
-  }
-  get January_Grant() {
-    return this.fwl.data.fields.January_Grant__c.value;
-  }
-  get January_Other() {
-    return this.fwl.data.fields.January_Other__c.value;
-  }
-  get January_Practice_Admin() {
-    return this.fwl.data.fields.January_Practice_Admin__c.value;
-  }
-  get January_Practice() {
-    return this.fwl.data.fields.January_Practice__c.value;
-  }
-  get January_Scholarship() {
-    return this.fwl.data.fields.January_Scholarship__c.value;
-  }
-  get January_Service() {
-    return this.fwl.data.fields.January_Service__c.value;
-  }
-  get January_Sim() {
-    return this.fwl.data.fields.January_Sim__c.value;
-  }
-  get July_Admin() {
-    return this.fwl.data.fields.July_Admin__c.value;
-  }
-  get July_Course_Dev() {
-    return this.fwl.data.fields.July_Course_Dev__c.value;
-  }
-  get July_Fellowship() {
-    return this.fwl.data.fields.July_Fellowship__c.value;
-  }
-  get July_Grant() {
-    return this.fwl.data.fields.July_Grant__c.value;
-  }
-  get July_Other() {
-    return this.fwl.data.fields.July_Other__c.value;
-  }
-  get July_Practice_Admin() {
-    return this.fwl.data.fields.July_Practice_Admin__c.value;
-  }
-  get July_Practice() {
-    return this.fwl.data.fields.July_Practice__c.value;
-  }
-  get July_Scholarship() {
-    return this.fwl.data.fields.July_Scholarship__c.value;
-  }
-  get July_Service() {
-    return this.fwl.data.fields.July_Service__c.value;
-  }
-  get July_Sim() {
-    return this.fwl.data.fields.July_Sim__c.value;
-  }
-  get June_Admin() {
-    return this.fwl.data.fields.June_Admin__c.value;
-  }
-  get June_Course_Dev() {
-    return this.fwl.data.fields.June_Course_Dev__c.value;
-  }
-  get June_Fellowship() {
-    return this.fwl.data.fields.June_Fellowship__c.value;
-  }
-  get June_Grant() {
-    return this.fwl.data.fields.June_Grant__c.value;
-  }
-  get June_Other() {
-    return this.fwl.data.fields.June_Other__c.value;
-  }
-  get June_Practice_Admin() {
-    return this.fwl.data.fields.June_Practice_Admin__c.value;
-  }
-  get June_Practice() {
-    return this.fwl.data.fields.June_Practice__c.value;
-  }
-  get June_Scholarship() {
-    return this.fwl.data.fields.June_Scholarship__c.value;
-  }
-  get June_Service() {
-    return this.fwl.data.fields.June_Service__c.value;
-  }
-  get June_Sim() {
-    return this.fwl.data.fields.June_Sim__c.value;
-  }
-  get March_Admin() {
-    return this.fwl.data.fields.March_Admin_Sum__c.value;
-  }
-  get March_Course_Dev() {
-    return this.fwl.data.fields.March_Course_Dev__c.value;
-  }
-  get March_Fellowship() {
-    return this.fwl.data.fields.March_Fellowship__c.value;
-  }
-  get March_Grant() {
-    return this.fwl.data.fields.March_Grant__c.value;
-  }
-  get March_Other() {
-    return this.fwl.data.fields.March_Other__c.value;
-  }
-  get March_Practice_Admin() {
-    return this.fwl.data.fields.March_Practice_Admin__c.value;
-  }
-  get March_Practice() {
-    return this.fwl.data.fields.March_Practice__c.value;
-  }
-  get March_Scholarship() {
-    return this.fwl.data.fields.March_Scholarship__c.value;
-  }
-  get March_Service() {
-    return this.fwl.data.fields.March_Service__c.value;
-  }
-  get March_Sim() {
-    return this.fwl.data.fields.March_Sim__c.value;
-  }
-  get May_Admin() {
-    return this.fwl.data.fields.May_Admin__c.value;
-  }
-  get May_Course_Dev() {
-    return this.fwl.data.fields.May_Course_Dev__c.value;
-  }
-  get May_Fellowship() {
-    return this.fwl.data.fields.May_Fellowship__c.value;
-  }
-  get May_Grant() {
-    return this.fwl.data.fields.May_Grant__c.value;
-  }
-  get May_Other() {
-    return this.fwl.data.fields.May_Other__c.value;
-  }
-  get May_Practice_Admin() {
-    return this.fwl.data.fields.May_Practice_Admin__c.value;
-  }
-  get May_Practice() {
-    return this.fwl.data.fields.May_Practice__c.value;
-  }
-  get May_Scholarship() {
-    return this.fwl.data.fields.May_Scholarship__c.value;
-  }
-  get May_Service() {
-    return this.fwl.data.fields.May_Service__c.value;
-  }
-  get May_Sim() {
-    return this.fwl.data.fields.May_Sim__c.value;
-  }
-  get November_Admin() {
-    return this.fwl.data.fields.November_Admin__c.value;
-  }
-  get November_Course_Dev() {
-    return this.fwl.data.fields.November_Course_Dev__c.value;
-  }
-  get November_Fellowship() {
-    return this.fwl.data.fields.November_Fellowship__c.value;
-  }
-  get November_Grant() {
-    return this.fwl.data.fields.November_Grant__c.value;
-  }
-  get November_Other() {
-    return this.fwl.data.fields.November_Other__c.value;
-  }
-  get November_Practice_Admin() {
-    return this.fwl.data.fields.November_Practice_Admin__c.value;
-  }
-  get November_Practice() {
-    return this.fwl.data.fields.November_Practice__c.value;
-  }
-  get November_Scholarship() {
-    return this.fwl.data.fields.November_Scholarship__c.value;
-  }
-  get November_Service() {
-    return this.fwl.data.fields.November_Service__c.value;
-  }
-  get November_Sim() {
-    return this.fwl.data.fields.November_Sim__c.value;
-  }
-  get October_Admin() {
-    return this.fwl.data.fields.October_Admin__c.value;
-  }
-  get October_Course_Dev() {
-    return this.fwl.data.fields.October_Course_Dev__c.value;
-  }
-  get October_Fellowship() {
-    return this.fwl.data.fields.October_Fellowship__c.value;
-  }
-  get October_Grant() {
-    return this.fwl.data.fields.October_Grant__c.value;
-  }
-  get October_Other() {
-    return this.fwl.data.fields.October_Other__c.value;
-  }
-  get October_Practice_Admin() {
-    return this.fwl.data.fields.October_Practice_Admin__c.value;
-  }
-  get October_Practice() {
-    return this.fwl.data.fields.October_Practice__c.value;
-  }
-  get October_Scholarship() {
-    return this.fwl.data.fields.October_Scholarship__c.value;
-  }
-  get October_Service() {
-    return this.fwl.data.fields.October_Service__c.value;
-  }
-  get October_Sim() {
-    return this.fwl.data.fields.October_Sim__c.value;
-  }
   get Other_Monthly_Total_FTE() {
     return this.fwl.data.fields.Other_Monthly_Total_FTE__c.value;
   }
-  get September_Admin() {
-    return this.fwl.data.fields.September_Admin__c.value;
+  get Admin_01_January() {
+    return this.fwl.data.fields.Admin_01_January__c.value;
   }
-  get September_Course_Dev() {
-    return this.fwl.data.fields.September_Course_Dev__c.value;
+  get Admin_02_February() {
+    return this.fwl.data.fields.Admin_02_February__c.value;
   }
-  get September_Fellowship() {
-    return this.fwl.data.fields.September_Fellowship__c.value;
+  get Admin_03_March() {
+    return this.fwl.data.fields.Admin_03_March__c.value;
   }
-  get September_Grant() {
-    return this.fwl.data.fields.September_Grant__c.value;
+  get Admin_04_April() {
+    return this.fwl.data.fields.Admin_04_April__c.value;
   }
-  get September_Other() {
-    return this.fwl.data.fields.September_Other__c.value;
+  get Admin_05_May() {
+    return this.fwl.data.fields.Admin_05_May__c.value;
   }
-  get September_Practice_Admin() {
-    return this.fwl.data.fields.September_Practice_Admin__c.value;
+  get Admin_06_June() {
+    return this.fwl.data.fields.Admin_06_June__c.value;
   }
-  get September_Practice() {
-    return this.fwl.data.fields.September_Practice__c.value;
+  get Admin_07_July() {
+    return this.fwl.data.fields.Admin_07_July__c.value;
   }
-  get September_Scholarship() {
-    return this.fwl.data.fields.September_Scholarship__c.value;
+  get Admin_08_August() {
+    return this.fwl.data.fields.Admin_08_August__c.value;
   }
-  get September_Service() {
-    return this.fwl.data.fields.September_Service__c.value;
+  get Admin_09_September() {
+    return this.fwl.data.fields.Admin_09_September__c.value;
   }
-  get September_Sim() {
-    return this.fwl.data.fields.September_Sim__c.value;
+  get Admin_10_October() {
+    return this.fwl.data.fields.Admin_10_October__c.value;
+  }
+  get Admin_11_November() {
+    return this.fwl.data.fields.Admin_11_November__c.value;
+  }
+  get Admin_12_December() {
+    return this.fwl.data.fields.Admin_12_December__c.value;
+  }
+  get Course_Dev_01_January() {
+    return this.fwl.data.fields.Course_Dev_01_January__c.value;
+  }
+  get Course_Dev_02_February() {
+    return this.fwl.data.fields.Course_Dev_02_February__c.value;
+  }
+  get Course_Dev_03_March() {
+    return this.fwl.data.fields.Course_Dev_03_March__c.value;
+  }
+  get Course_Dev_04_April() {
+    return this.fwl.data.fields.Course_Dev_04_April__c.value;
+  }
+  get Course_Dev_05_May() {
+    return this.fwl.data.fields.Course_Dev_05_May__c.value;
+  }
+  get Course_Dev_06_June() {
+    return this.fwl.data.fields.Course_Dev_06_June__c.value;
+  }
+  get Course_Dev_07_July() {
+    return this.fwl.data.fields.Course_Dev_07_July__c.value;
+  }
+  get Course_Dev_08_August() {
+    return this.fwl.data.fields.Course_Dev_08_August__c.value;
+  }
+  get Course_Dev_09_September() {
+    return this.fwl.data.fields.Course_Dev_09_September__c.value;
+  }
+  get Course_Dev_10_October() {
+    return this.fwl.data.fields.Course_Dev_10_October__c.value;
+  }
+  get Course_Dev_11_November() {
+    return this.fwl.data.fields.Course_Dev_11_November__c.value;
+  }
+  get Course_Dev_12_December() {
+    return this.fwl.data.fields.Course_Dev_12_December__c.value;
+  }
+  get Fellowship_01_January() {
+    return this.fwl.data.fields.Fellowship_01_January__c.value;
+  }
+  get Fellowship_02_February() {
+    return this.fwl.data.fields.Fellowship_02_February__c.value;
+  }
+  get Fellowship_03_March() {
+    return this.fwl.data.fields.Fellowship_03_March__c.value;
+  }
+  get Fellowship_04_April() {
+    return this.fwl.data.fields.Fellowship_04_April__c.value;
+  }
+  get Fellowship_05_May() {
+    return this.fwl.data.fields.Fellowship_05_May__c.value;
+  }
+  get Fellowship_06_June() {
+    return this.fwl.data.fields.Fellowship_06_June__c.value;
+  }
+  get Fellowship_07_July() {
+    return this.fwl.data.fields.Fellowship_07_July__c.value;
+  }
+  get Fellowship_08_August() {
+    return this.fwl.data.fields.Fellowship_08_August__c.value;
+  }
+  get Fellowship_09_September() {
+    return this.fwl.data.fields.Fellowship_09_September__c.value;
+  }
+  get Fellowship_10_October() {
+    return this.fwl.data.fields.Fellowship_10_October__c.value;
+  }
+  get Fellowship_11_November() {
+    return this.fwl.data.fields.Fellowship_11_November__c.value;
+  }
+  get Fellowship_12_December() {
+    return this.fwl.data.fields.Fellowship_12_December__c.value;
+  }
+  get Fellowship_Count() {
+    return this.fwl.data.fields.Fellowship_Count__c.value;
+  }
+  get Grant_01_January() {
+    return this.fwl.data.fields.Grant_01_January__c.value;
+  }
+  get Grant_02_February() {
+    return this.fwl.data.fields.Grant_02_February__c.value;
+  }
+  get Grant_03_March() {
+    return this.fwl.data.fields.Grant_03_March__c.value;
+  }
+  get Grant_04_April() {
+    return this.fwl.data.fields.Grant_04_April__c.value;
+  }
+  get Grant_05_May() {
+    return this.fwl.data.fields.Grant_05_May__c.value;
+  }
+  get Grant_06_June() {
+    return this.fwl.data.fields.Grant_06_June__c.value;
+  }
+  get Grant_07_July() {
+    return this.fwl.data.fields.Grant_07_July__c.value;
+  }
+  get Grant_08_August() {
+    return this.fwl.data.fields.Grant_08_August__c.value;
+  }
+  get Grant_09_September() {
+    return this.fwl.data.fields.Grant_09_September__c.value;
+  }
+  get Grant_10_October() {
+    return this.fwl.data.fields.Grant_10_October__c.value;
+  }
+  get Grant_11_November() {
+    return this.fwl.data.fields.Grant_11_November__c.value;
+  }
+  get Grant_12_December() {
+    return this.fwl.data.fields.Grant_12_December__c.value;
+  }
+  get Other_01_January() {
+    return this.fwl.data.fields.Other_01_January__c.value;
+  }
+  get Other_02_February() {
+    return this.fwl.data.fields.Other_02_February__c.value;
+  }
+  get Other_03_March() {
+    return this.fwl.data.fields.Other_03_March__c.value;
+  }
+  get Other_04_April() {
+    return this.fwl.data.fields.Other_04_April__c.value;
+  }
+  get Other_05_May() {
+    return this.fwl.data.fields.Other_05_May__c.value;
+  }
+  get Other_06_June() {
+    return this.fwl.data.fields.Other_06_June__c.value;
+  }
+  get Other_07_July() {
+    return this.fwl.data.fields.Other_07_July__c.value;
+  }
+  get Other_08_August() {
+    return this.fwl.data.fields.Other_08_August__c.value;
+  }
+  get Other_09_September() {
+    return this.fwl.data.fields.Other_09_September__c.value;
+  }
+  get Other_10_October() {
+    return this.fwl.data.fields.Other_10_October__c.value;
+  }
+  get Other_11_November() {
+    return this.fwl.data.fields.Other_11_November__c.value;
+  }
+  get Other_12_December() {
+    return this.fwl.data.fields.Other_12_December__c.value;
+  }
+  get Practice_01_January() {
+    return this.fwl.data.fields.Practice_01_January__c.value;
+  }
+  get Practice_02_February() {
+    return this.fwl.data.fields.Practice_02_February__c.value;
+  }
+  get Practice_03_March() {
+    return this.fwl.data.fields.Practice_03_March__c.value;
+  }
+  get Practice_04_April() {
+    return this.fwl.data.fields.Practice_04_April__c.value;
+  }
+  get Practice_05_May() {
+    return this.fwl.data.fields.Practice_05_May__c.value;
+  }
+  get Practice_06_June() {
+    return this.fwl.data.fields.Practice_06_June__c.value;
+  }
+  get Practice_07_July() {
+    return this.fwl.data.fields.Practice_07_July__c.value;
+  }
+  get Practice_08_August() {
+    return this.fwl.data.fields.Practice_08_August__c.value;
+  }
+  get Practice_09_September() {
+    return this.fwl.data.fields.Practice_09_September__c.value;
+  }
+  get Practice_10_October() {
+    return this.fwl.data.fields.Practice_10_October__c.value;
+  }
+  get Practice_11_November() {
+    return this.fwl.data.fields.Practice_11_November__c.value;
+  }
+  get Practice_12_December() {
+    return this.fwl.data.fields.Practice_12_December__c.value;
+  }
+  get Practice_Admin_01_January() {
+    return this.fwl.data.fields.Practice_Admin_01_January__c.value;
+  }
+  get Practice_Admin_02_February() {
+    return this.fwl.data.fields.Practice_Admin_02_February__c.value;
+  }
+  get Practice_Admin_03_March() {
+    return this.fwl.data.fields.Practice_Admin_03_March__c.value;
+  }
+  get Practice_Admin_04_April() {
+    return this.fwl.data.fields.Practice_Admin_04_April__c.value;
+  }
+  get Practice_Admin_05_May() {
+    return this.fwl.data.fields.Practice_Admin_05_May__c.value;
+  }
+  get Practice_Admin_06_June() {
+    return this.fwl.data.fields.Practice_Admin_06_June__c.value;
+  }
+  get Practice_Admin_07_July() {
+    return this.fwl.data.fields.Practice_Admin_07_July__c.value;
+  }
+  get Practice_Admin_08_August() {
+    return this.fwl.data.fields.Practice_Admin_08_August__c.value;
+  }
+  get Practice_Admin_09_September() {
+    return this.fwl.data.fields.Practice_Admin_09_September__c.value;
+  }
+  get Practice_Admin_10_October() {
+    return this.fwl.data.fields.Practice_Admin_10_October__c.value;
+  }
+  get Practice_Admin_11_November() {
+    return this.fwl.data.fields.Practice_Admin_11_November__c.value;
+  }
+  get Practice_Admin_12_December() {
+    return this.fwl.data.fields.Practice_Admin_12_December__c.value;
+  }
+  get Scholarship_01_January() {
+    return this.fwl.data.fields.Scholarship_01_January__c.value;
+  }
+  get Scholarship_02_February() {
+    return this.fwl.data.fields.Scholarship_02_February__c.value;
+  }
+  get Scholarship_03_March() {
+    return this.fwl.data.fields.Scholarship_03_March__c.value;
+  }
+  get Scholarship_04_April() {
+    return this.fwl.data.fields.Scholarship_04_April__c.value;
+  }
+  get Scholarship_05_May() {
+    return this.fwl.data.fields.Scholarship_05_May__c.value;
+  }
+  get Scholarship_06_June() {
+    return this.fwl.data.fields.Scholarship_06_June__c.value;
+  }
+  get Scholarship_07_July() {
+    return this.fwl.data.fields.Scholarship_07_July__c.value;
+  }
+  get Scholarship_08_August() {
+    return this.fwl.data.fields.Scholarship_08_August__c.value;
+  }
+  get Scholarship_09_September() {
+    return this.fwl.data.fields.Scholarship_09_September__c.value;
+  }
+  get Scholarship_10_October() {
+    return this.fwl.data.fields.Scholarship_10_October__c.value;
+  }
+  get Scholarship_11_November() {
+    return this.fwl.data.fields.Scholarship_11_November__c.value;
+  }
+  get Scholarship_12_December() {
+    return this.fwl.data.fields.Scholarship_12_December__c.value;
+  }
+  get Service_01_January() {
+    return this.fwl.data.fields.Service_01_January__c.value;
+  }
+  get Service_02_February() {
+    return this.fwl.data.fields.Service_02_February__c.value;
+  }
+  get Service_03_March() {
+    return this.fwl.data.fields.Service_03_March__c.value;
+  }
+  get Service_04_April() {
+    return this.fwl.data.fields.Service_04_April__c.value;
+  }
+  get Service_05_May() {
+    return this.fwl.data.fields.Service_05_May__c.value;
+  }
+  get Service_06_June() {
+    return this.fwl.data.fields.Service_06_June__c.value;
+  }
+  get Service_07_July() {
+    return this.fwl.data.fields.Service_07_July__c.value;
+  }
+  get Service_08_August() {
+    return this.fwl.data.fields.Service_08_August__c.value;
+  }
+  get Service_09_September() {
+    return this.fwl.data.fields.Service_09_September__c.value;
+  }
+  get Service_10_October() {
+    return this.fwl.data.fields.Service_10_October__c.value;
+  }
+  get Service_11_November() {
+    return this.fwl.data.fields.Service_11_November__c.value;
+  }
+  get Service_12_December() {
+    return this.fwl.data.fields.Service_12_December__c.value;
+  }
+  get Sim_01_January() {
+    return this.fwl.data.fields.Sim_01_January__c.value;
+  }
+  get Sim_02_February() {
+    return this.fwl.data.fields.Sim_02_February__c.value;
+  }
+  get Sim_03_March() {
+    return this.fwl.data.fields.Sim_03_March__c.value;
+  }
+  get Sim_04_April() {
+    return this.fwl.data.fields.Sim_04_April__c.value;
+  }
+  get Sim_05_May() {
+    return this.fwl.data.fields.Sim_05_May__c.value;
+  }
+  get Sim_06_June() {
+    return this.fwl.data.fields.Sim_06_June__c.value;
+  }
+  get Sim_07_July() {
+    return this.fwl.data.fields.Sim_07_July__c.value;
+  }
+  get Sim_08_August() {
+    return this.fwl.data.fields.Sim_08_August__c.value;
+  }
+  get Sim_09_September() {
+    return this.fwl.data.fields.Sim_09_September__c.value;
+  }
+  get Sim_10_October() {
+    return this.fwl.data.fields.Sim_10_October__c.value;
+  }
+  get Sim_11_November() {
+    return this.fwl.data.fields.Sim_11_November__c.value;
+  }
+  get Sim_12_December() {
+    return this.fwl.data.fields.Sim_12_December__c.value;
   }
 }
